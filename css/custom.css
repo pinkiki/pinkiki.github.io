@@ -393,3 +393,7 @@ svg.icon {
    fill: currentColor;
    overflow: hidden;
 }
+.loading-img {
+  background: url(https://free4.yunpng.top/2025/03/10/67ce864915d9f.png) no-repeat center center;
+  background-size: cover;
+}
