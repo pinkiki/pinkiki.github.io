@@ -385,3 +385,11 @@ div#category {
 [data-theme=dark] #aside-content>.sticky_layout>.card-widget{
   background-image: linear-gradient(to top, #ccf6f9 0%, #fafcfc 100%);
 }
+svg.icon {
+  /* 这里定义svg.icon，避免和Butterfly自带的note标签冲突 */
+   width: 1em; height: 1em;
+   /* width和height定义图标的默认宽度和高度*/
+   vertical-align: -0.15em;
+   fill: currentColor;
+   overflow: hidden;
+}
