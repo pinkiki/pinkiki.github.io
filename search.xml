@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>vue3学习笔记</title>
+      <link href="/vue3-study/"/>
+      <url>/vue3-study/</url>
+      
+        <content type="html"><![CDATA[<h3 style="text-align: left;" >script setup到底做了什么</h3><div class="note info no-icon flat"><p><strong>script setup 的本质：</strong><br>1. 代码会在 组件实例创建之前执行（在 beforeCreate 之前）。<br> 2. Vue 会自动处理作用域，所以 this 不可用。</p></div><span class='p code'>在 Vue 3 中， setup 是对 Vue 组合式 API（Composition API）的一个简化语法糖。</span><p>当使用 setup() 方式时，可以通过 setup(props, { expose }) 的 expose() 方法 来暴露实例成员<br>在 script setup 语法中，Vue 提供了一个编译时宏 defineExpose()（仅在编译时生效，不会在运行时生成额外代码），用来暴露实例成员,不会影响性能</p><h3 style="text-align: left;" >Proxy比defineProperty到底好在哪</h3><div class="note info no-icon flat"><p>Proxy 比 Object.defineProperty 更强大的地方在于 <strong>它能代理整个对象，而不是只能拦截单个属性</strong>。同时，Proxy 提供了 13 种拦截操作，而 Object.defineProperty 只能拦截 get 和 set，局限性更大。支持监听对象新增&#x2F;，支持数组的变异方法，性能更优</p></div><p>  <strong>Vue 2 响应式的实现（基于 Object.defineProperty）</strong></p><ul><li>递归遍历对象的每个属性，使用 Object.defineProperty() 重新定义 getter 和 setter 。</li><li>每次访问属性时触发 getter，收集依赖（Dep）。</li><li>修改属性值时触发 setter，通知依赖更新（watcher）。 <br></li></ul><span style="background-color: rgb(165 209 251 / 23%); padding: 2px 4px; border-radius: 4px;">Vue 2 的缺点</span><ol><li>只能监听已有属性，无法监听新增&#x2F;删除的属性<br>解决方案：Vue 2 通过 $set() 手动添加新属性，但不够优雅。</li><li>数组的变异方法（push、pop、splice 等）无法被拦截<br>  Vue 2 需要用 Array.prototype 变异方法（需要手动重写 push&#x2F;pop 等）来手动触发视图更新，绕开 defineProperty 的限制。</li><li>必须递归遍历整个对象，性能开销大<br>  Vue 2 需要在初始化时递归遍历整个对象的所有属性，并为每个属性创建 getter&#x2F;setter。如果对象层级很深，初始化成本非常高。</li></ol><span style="background-color: rgb(165 209 251 / 23%); padding: 2px 4px; border-radius: 4px;">Vue 3 响应式的实现（基于 Proxy）</span><br><p>Vue 3 用 Proxy 直接代理整个对象，而不是单独处理每个属性：</p><pre class="language-javaScript" data-language="javaScript"><code class="language-javaScript">const handler &#x3D; &#123;  get(target, key, receiver) &#123;    console.log(&#96;读取属性 $&#123;key&#125;&#96;);    return Reflect.get(target, key, receiver);  &#125;,  set(target, key, value, receiver) &#123;    console.log(&#96;设置属性 $&#123;key&#125;，新值为 $&#123;value&#125;&#96;);    return Reflect.set(target, key, value, receiver);  &#125;&#125;;const data &#x3D; new Proxy(&#123; msg: &#39;hello&#39; &#125;, handler);console.log(data.msg); &#x2F;&#x2F; 读取属性 msgdata.msg &#x3D; &#39;world&#39;;    &#x2F;&#x2F; 设置属性 msg，新值为 worlddata.newProp &#x3D; &#39;new&#39;;  &#x2F;&#x2F; 设置属性 newProp，新值为 new</code></pre><p>Vue 3 的 reactive 通过 Proxy 进行封装：</p><pre class="language-javaScript" data-language="javaScript"><code class="language-javaScript">function reactive(target) &#123;  return new Proxy(target, &#123;    get(target, key, receiver) &#123;      console.log(&#96;读取 $&#123;key&#125;&#96;);      return Reflect.get(target, key, receiver);    &#125;,    set(target, key, value, receiver) &#123;      console.log(&#96;修改 $&#123;key&#125; -&gt; $&#123;value&#125;&#96;);      return Reflect.set(target, key, value, receiver);    &#125;,    deleteProperty(target, key) &#123;      console.log(&#96;删除 $&#123;key&#125;&#96;);      return Reflect.deleteProperty(target, key);    &#125;  &#125;);&#125;</code></pre><h3 style="text-align: left;">并发任务执行</h3>]]></content>
+      
+      
+      <categories>
+          
+          <category> vue3 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> vue3 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>出师表</title>
+      <link href="/hello-world/"/>
+      <url>/hello-world/</url>
+      
+        <content type="html"><![CDATA[<pre class="language-javaScript" data-language="javaScript"><code class="language-javaScript">  &#x2F;&#x2F; let url &#x3D; &#96;http:&#x2F;&#x2F;192.168.2.29:8864&#x2F;template&#x2F;page?pageNo&#x3D;$&#123;current.value&#125;&amp;pageSize&#x3D;$&#123;size.value&#125;&#96;;  &#x2F;&#x2F; axios.get(url).then((result: any) &#x3D;&gt; &#123;  &#x2F;&#x2F;   if (result.data &amp;&amp; result.data.result &amp;&amp; result.data.result.records) &#123;  &#x2F;&#x2F;     userList.value &#x3D; result.data.result.records;  &#x2F;&#x2F;     total.value &#x3D; result.data.result.total;  &#x2F;&#x2F;   &#125; else &#123;  &#x2F;&#x2F;     ElMessage.error(&#39;接口数据格式不符合预期，请检查！&#39;);  &#x2F;&#x2F;   &#125;  &#x2F;&#x2F; &#125;).catch((error) &#x3D;&gt; &#123;  &#x2F;&#x2F;   ElMessage.error(&#39;获取分页数据失败，请检查网络或接口配置&#39;);  &#x2F;&#x2F; &#125;);function handleBlur() &#123;  const suListj &#x3D; &#123; ...suList.value &#125;;  let url &#x3D; &#39;&#x2F;template&#x2F;calculateTotalScore&#39;  reqsult.post(url, suListj).then((result: any) &#x3D;&gt; &#123;    console.log(result, &#39;0001222&#39;);    suList.value &#x3D; result.result;  &#125;)&#125;function handleBlurs() &#123;  const EsuListj &#x3D; &#123; ...EsuList.value &#125;;  let url &#x3D; &#39;&#x2F;template&#x2F;calculateTotalScore&#39;  reqsult.post(url, EsuListj).then((result: any) &#x3D;&gt; &#123;    console.log(result, &#39;0001222&#39;);    EsuList.value &#x3D; result.result;  &#125;)&#125;</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 古诗 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 诗词 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>
