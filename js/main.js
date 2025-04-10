@@ -717,7 +717,7 @@ document.addEventListener("DOMContentLoaded", function () {
       // 生成标准化ID
       let baseId = heading.textContent
         .trim()
-        .toLowerCase()
+        // .toLowerCase()
         .replace(/[^\w\u4e00-\u9fa5-]/g, '-') // 保留中文、字母、数字、连字符
         .replace(/-+/g, '-')
         .replace(/^-|-$/g, '');
@@ -758,7 +758,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // 辅助函数：从文本生成标准化ID
   const generateIdFromText = (text) => {
     return text.trim()
-      .toLowerCase()
+      // .toLowerCase()
       .replace(/[^\w\u4e00-\u9fa5-]/g, '-')
       .replace(/-+/g, '-')
       .replace(/^-|-$/g, '');
