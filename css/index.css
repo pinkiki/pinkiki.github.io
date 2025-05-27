@@ -4389,6 +4389,7 @@ body[data-type='about'] #web_bg {
   position: absolute;
   bottom: 1rem;
   left: 2rem;
+  width: 60%;
 }
 .post-tips a {
   color: var(--anzhiyu-gray) !important;
