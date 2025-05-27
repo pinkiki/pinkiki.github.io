@@ -1,3 +1,3 @@
-var posts=["GUIYUAN/","configuration/","mysql/","node/","proxy/","project-summary/","interview-me/","vue3-study/"];function toRandomPost(){
+var posts=["GUIYUAN/","configuration/","interview-me/","mysql/","node/","proxy/","project-summary/","vue3-study/"];function toRandomPost(){
     pjax.loadUrl('/'+posts[Math.floor(Math.random() * posts.length)]);
   };
