@@ -1,0 +1,1249 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"><title>js学习笔记 | 晨梦记</title><meta name="keywords" content="js"><meta name="author" content="晨梦"><meta name="copyright" content="晨梦"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#f7f9fe"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-touch-fullscreen" content="yes"><meta name="apple-mobile-web-app-title" content="js学习笔记"><meta name="application-name" content="js学习笔记"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="#f7f9fe"><meta property="og:type" content="article"><meta property="og:title" content="js学习笔记"><meta property="og:url" content="http://example.com/js/index.html"><meta property="og:site_name" content="晨梦记"><meta property="og:description" content="关于js的知识点"><meta property="og:locale" content="zh-CN"><meta property="og:image" content="https://bu.dusays.com/2025/06/19/68541c91d11be.jpg"><meta property="article:author" content="晨梦"><meta property="article:tag"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="https://bu.dusays.com/2025/06/19/68541c91d11be.jpg"><meta name="description" content="关于js的知识点"><link rel="shortcut icon" href="/favicon.ico"><link rel="canonical" href="http://example.com/js/"><link rel="preconnect" href="//cdn.cbd.int"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta name="google-site-verification" content="xxx"/><meta name="baidu-site-verification" content="code-xxx"/><meta name="msvalidate.01" content="xxx"/><link rel="manifest" href="/manifest.json"/><meta name="msapplication-TileColor" content="#3b70fc"/><link rel="mask-icon" href="/img/siteicon/128.png" color="#5bbad5"/><link rel="apple-touch-icon" sizes="180x180" href="/img/siteicon/128.png"/><link rel="apple-touch-icon-precomposed" sizes="180x180" href="/img/siteicon/128.png"/><link rel="icon" type="image/png" sizes="32x32" href="/img/siteicon/32.png"/><link rel="icon" type="image/png" sizes="16x16" href="/img/siteicon/16.png"/><link rel="bookmark" href="/img/siteicon/apple-icon-180.png"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-2048-2732.jpg" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-2732-2048.jpg" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-1668-2388.jpg" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-2388-1668.jpg" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-1536-2048.jpg" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-2048-1536.jpg" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-1668-2224.jpg" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-2224-1668.jpg" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-1620-2160.jpg" media="(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-2160-1620.jpg" media="(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-1290-2796.jpg" media="(device-width: 430px) and (device-height: 932px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-2796-1290.jpg" media="(device-width: 430px) and (device-height: 932px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-1179-2556.jpg" media="(device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-2556-1179.jpg" media="(device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-1284-2778.jpg" media="(device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-2778-1284.jpg" media="(device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-1170-2532.jpg" media="(device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-2532-1170.jpg" media="(device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-1125-2436.jpg" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-2436-1125.jpg" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-1242-2688.jpg" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-2688-1242.jpg" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-828-1792.jpg" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-1792-828.jpg" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-1242-2208.jpg" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-2208-1242.jpg" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-750-1334.jpg" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-1334-750.jpg" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-640-1136.jpg" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-1136-640.jpg" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"/><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@1.0.17/lib/assets/font-awesome-animation.min.css"><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/swiper/swiper.min.css" media="print" onload="this.media='all'"><script async="async" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><script>(adsbygoogle = window.adsbygoogle || []).push({
+  google_ad_client: 'ca-pub-3401288193518585',
+  enable_page_level_ads: 'true'
+});</script><script>const GLOBAL_CONFIG = {
+  linkPageTop: undefined,
+  peoplecanvas: undefined,
+  postHeadAiDescription: {"enable":true,"gptName":"AnZhiYu","mode":"local","switchBtn":false,"btnLink":"https://afdian.net/item/886a79d4db6711eda42a52540025c377","randomNum":3,"basicWordCount":1000,"key":"xxxx","Referer":"https://xx.xx/"},
+  diytitle: {"enable":true,"leaveTitle":"w(ﾟДﾟ)w 不要走！再看看嘛！","backTitle":"♪(^∇^*)欢迎肥来！"},
+  LA51: undefined,
+  greetingBox: undefined,
+  twikooEnvId: 'https://www.cmeng.me/',
+  commentBarrageConfig:undefined,
+  music_page_default: "nav_music",
+  root: '/',
+  preloader: {"source":3},
+  friends_vue_info: undefined,
+  navMusic: true,
+  mainTone: undefined,
+  authorStatus: {"skills":["🤖️ 数码科技爱好者","🔍 分享与热心帮助","🏠 智能家居小能手","🔨 设计开发一条龙","🤝 专修交互与设计","🏃 脚踏实地行动派","🧱 团队小组发动机","💢 美女人狠话不多"]},
+  algolia: {"appId":"0LXH905T1G","apiKey":"ed1b5cdf58e2d6b2fa7de75fabb36c69","indexName":"hexo","hits":{"per_page":10},"languages":{"input_placeholder":"输入关键词后按下回车查找","hits_empty":"找不到您查询的内容：${query}","hits_stats":"找到 ${hits} 条结果，用时 ${time} 毫秒"}},
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简","rightMenuMsgToTraditionalChinese":"转为繁体","rightMenuMsgToSimplifiedChinese":"转为简体"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"prismjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":330},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    simplehomepage: true,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"copy":true,"copyrightEbable":false,"limitCount":50,"languages":{"author":"作者: 晨梦","link":"链接: ","source":"来源: 晨梦记","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。","copySuccess":"复制成功，复制和转载请标注本文地址"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#425AEF","bgDark":"#1f1f1f","position":"top-center"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.min.js',
+      css: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  shortcutKey: undefined,
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  configTitle: '晨梦记',
+  title: 'js学习笔记',
+  postAI: '',
+  pageFillDescription: '什么是闭包有什么用, 如何遍历对象, 如何判断JS的数据类型, 说说常见的数组方法, 防抖和节流, GET 和 POST 请求的区别, 强缓存和协商缓存, 项目中有没有用过缓存策略？怎么设置的？, 浏览器存储的方式有哪些, Cookie, LocalStorage, SessionStorage, IndexedDB, 浅拷贝和深拷贝, 浅拷贝, 深拷贝, 数组去重的方法（3种）, 介绍下promise.all , lastIndexOf() , substring() , Object.assign(), 原型链, prototype, _proto_, Web Worker是什么, v8垃圾回收机制, 网络安全, XSS 攻击,  DDoS 攻击, CSRF 攻击, SQL注入, 路由守卫是什么, 什么是跨域？, 定义：, 如何解决跨域问题？, CORS 中浏览器会发送几次请求？分别是什么？什么是闭包有什么用闭包是内部函数引用外部函数局部变量的一个引用关系这个引用关系是用一个对象去描述的这个对象存在于内部函数对象身上外部函数调用几次就有几套独立机制的闭包机制产生条件函数嵌套函数内部函数引用外部函数的局部变量调用外部函数时就产生闭包闭包不是在调用函数内部时产生的而是在创建内部函数对象时产生作用延长局部变量的生命周期让函数外部间接操作内部的局部变量保护变量不被销毁持久化变量比如计数器节流防抖中都需要保存状态变量缺点闭包分为临时闭包和永久闭包永久闭包不会被销毁就可能产生内存泄漏所以闭包使用完成记得手动释放让内部函数对象成为垃圾对象断开指向它的所有引用用到过闭包的场景防抖函数这里变量在返回的函数中被引用形成闭包使得它不会被销毁防抖函数通过闭包保存了变量让每次触发时都可以取消上一次的定时器只保留最后一次从而实现最后一次操作后才触发的效果定义一个定时器变量接收任意数量的参数并把它们收集到一个数组里每次调用时都清除前一个定时器重新设置定时器等毫秒后执行过毫秒后调用函数并把你传入的参数原封不动地传进去同时保持不变如何遍历对象使用遍历可枚举属性包括继承的属性使用获取自身可枚举的键使用获取键值对数组使用获取所有自身属性包括不可枚举和如何判断的数据类型首先想到的是但是在检验对象或者数组是不能检测出精准的数据类型都会返回然后想到专门判断对象的数据检查的隐式原型属性是与的显示原型结论任何对象的都是无法帮我们判定死是否是对象或者数组判断是否为数组最终办法说说常见的数组方法防抖和节流防抖在事件触发后一段时间只执行一次如果在这段时间内事件被重新触发则重新计时搜索框输入联想防止按钮连点等高频操作优化节流一定时间内只执行一次即使事件持续触发也只会每隔设定时间执行一次页面滚动监听拖拽事件游戏中的按键响应窗口监听防抖代码当事件触发后会设置一个定时器在指定的延迟时间后在执行相应的操作如果在延迟时间内再次触发了同一事件那么就会清除之前的定时器并重新设置新的定时器直到事件触发完成节流代码当事件触发后事件处理函数会在固定的时间间隔内执行即使事件被频繁触发也是如此和请求的区别背景最初是浏览器与服务器之间的通讯协议用于读取资源用于提交表单后来被扩充到接口格式的定义和作为接口的请求方式区别传参方式不同参数拼接在后面格式为例参数放在请求体中不会出现在中例子请求体中安全性对比参数暴露在中不适合传输敏感信息如密码易被浏览器缓存参数也可能被记录在浏览历史中相对更安全虽然本质上也不加密因为参数藏在请求体中数据长度限制有长度限制不同浏览器服务器限制不同通常在理论上没有大小限制适合上传大文件或大量数据浏览器行为请求可以被收藏缓存重复提交刷新不弹窗能由浏览器自动发起如资源加载请求不能被浏览器缓存刷新会弹出是否重新提交表单提示强缓存和协商缓存强缓存浏览器先检查本地缓存是否可用如果可用则直接使用不发起请求常见字段设置一个绝对时间点格式设置相对时间如表示缓存小时表示该资源在缓存中可以保存秒内不再请求服务器协商缓存当强缓存失效时浏览器会向服务器发送请求并携带资源的标识信息如时间戳或文件哈希进行协商如果资源没变返回浏览器使用缓存如果资源变了返回和新资源协商机制是资源内容的哈希值浏览器下次请求带上服务器判断是否相同为什么有了强缓存还需要协商缓存原因一强缓存有时间限制强缓存依赖或缓存一旦过期就会失效浏览器此时需要向服务器确认资源是否更新就用协商缓存来减少资源浪费原因二资源可能在有效期内就更新了比如但分钟后服务器更新了资源客户端还在用旧的缓存内容这时只有协商缓存能解决这个问题它允许服务器来判断资源是否真的需要更新所以强缓存协商缓存是浏览器缓存的两道防线优先走强缓存失败后才协商都失败才会下载新资源减少带宽浪费提高性能项目中有没有用过缓存策略怎么设置的请求头缓存服务端缓存策略配合后台设置缓存头比如前端可以利用浏览器强缓存不重复请求资源组件层面的缓存页面切换时保留状态提高页面切换性能使用场景比如在一个列表页详情页切换中返回列表时希望保留滚动位置搜索条件等状态设置方式或使用的字段动态请求接口层面的缓存减少重复请求提高响应速度使用场景做的管理端里比如新建用户要选择部门这个下拉框来源于接口这个部门列表基本不会变但每次打开这个页面都发一次请求多页面还会重复请求请求一次之后缓存起来下次直接使用缓存缓存在或中如果我缓存了数据那怎么知道它已经变化该重新请求了用户主动触发最常见方式重新拉取更新缓存设置过期时间自动判断比如你把数据存在里可以加个时间戳判断是否过期后台返回版本号时间戳哈希高级策略这个常用于大公司大型项目服务端接口会返回一个或字段前端请求时带上这个标识服务端会判断数据有没有变如果没变就返回这其实就是协商缓存的思想浏览器存储的方式有哪些保存状态存储东西它的诞生是为了解决协议的无状态问题服务器无法识别不同用户或跟踪用户的状态但也导致了一些问题比如无法保持用户的登陆状态等主要用于会话管理如登录状态也可存储少量数据每次请求都会自动携带到服务器适合服务器识别用户会过期数据长期保留除非手动删除适合存储用户设置主题偏好缓存列表等仅当前标签页有效关闭页面就清空适合存储表单填写中间状态当前页状态特点浏览器内建的数据库支持结构化数据事务索引适合场景大数据缓存本地搜索数据本地聊天记录离线应用登陆的放还是放结论先说如果你对安全要求较高推荐放在中并设置否则放在也可以简单易用但安全性略差容易被攻击读出导致用户身份泄露的坑如果设置了跨域请求需要加上并配合后端那么什么时候用什么时候用选择的场景安全优先登录态需要被服务器自动识别比如传统服务端渲染项目对安全性要求较高的项目如后台管理系统想防止窃取使用方案中过期怎么办短效刷新服务端设置两个短效分钟过期长效天天过期流程如下前端发请求自动随发送如果接口返回过期前端自动调用刷新接口服务端验证返回新的前端重试原请求后端设置的时候可以指定或分钟过期天过期选择的场景灵活易用单页应用前后端完全分离使用手动加请求头如拦截器对安全要求不是极高但追求开发便利请求拦截器在每个请求发送之前都添加到请求头获取假设存储在中如果存在则在请求头中添加浅拷贝和深拷贝浅拷贝拷贝对象的第一层属性值如果属性是引用类型如对象数组只拷贝地址不复制内容修改嵌套对象会影响原对象总结一句话第一层复制内部引用地址共享浅拷贝常见方法深拷贝拷贝对象及其所有层级的值互不影响总结一句话层层复制彻底独立浅拷贝只复制一层引用适合不修改嵌套属性的场景深拷贝彻底复制每一层适合需要修改嵌套结构的场景编辑场景撤销功能就必须保存独立的一份完整拷贝这样以后回退时才不会影响原始数据所以要用深拷贝简单深拷贝常见方法会丢失函数循环引用等现代浏览器支持手写深拷贝递归浅拷贝带来的常见变成了浅拷贝坑数组去重的方法种用只允许存储唯一的值利用方法来遍历数组只保留第一次出现的元素使用方法逐个遍历数组元素构建一个新的数组只添加第一次出现的元素介绍下工作中经常用到它来并发请求多个接口等待所有结果比如同时加载多个接口数据页面初始化并行上传多个文件并发处理多个异步任务比如图片资源等等一句话介绍用于并行执行多个等全部成功才返回其中任何一个失败都会进入所有成功按顺序拿结果只要有一个失败就走这里场景用户信息角色信息菜单信息有一个接口失败了进阶扩展如果你想部分失败不影响其他的成功可以用成功失败是中字符串对象的一个方法用来查找某个子字符串在原字符串中最后一次出现的位置索引例子查找最后一个斜杠的位置输出最后一个在位置查找最后出现的位置输出首次出现位置截取之后的部分输出是中字符串对象的一个方法用来从字符串中提取子字符串截取一部分字符串从索引开始到索引之前结束不包含从索引开始截取到末尾用于将一个或多个源对象的可枚举属性复制到目标对象上并返回目标对象目标对象属性会被添加到它身上一个或多个源对象从中复制属性例子也可以覆盖结果浅拷贝对象不会复制原型链上的属性只拷贝自身的可枚举属性浅拷贝应用场景对象合并配置合并状态合并浅拷贝对象扩展与扩展运算符区别都是浅拷贝但扩展运算符不会复制会调用方法原型链代码示例首先定义了一个构造函数然后在构造函数的上定义了一个方法接着创造了一个实例对象并访问它的属性和方法最后验证了实例对象的属性确实指向构造函数的对象建立了原型链关系创建一个构造函数在构造函数的上定义一个方法创建一个实例对象访问实例对象的属性和方法输出输出查看实例对象的属性它指向构造函数的对象输出构造函数特有的属性每个函数对象都有一个属性它是一个对象常用于定义共享的属性和方法可以被构造函数创建的实例对象所继承可以在构造函数的上定义方法以便多个实例对象共享这些方法从而节省内存主要用于原型继承它是构造函数和实例对象之间的链接用于共享方法和属性每个对象都具有的属性它指向对象的原型用于实现原型链当访问一个对象的属性时如果对象本身没有这个属性引擎会沿着原型链通过属性向上查找直到找到属性或者到达原型链的顶部通常是主要是用于对象之间的继承它建立了对象之间的原型关系总结构造函数的对象会被赋予给实例对象的属性从而建立了原型链是什么是一种在浏览器中开启独立线程运行脚本的方法常用于处理耗时操作以防止阻塞主线程线程提升页面响应性能适用场景数据密集型计算如大规模循环计算加密排序后台处理任务如解析文件大数据处理不需要操作因为无法访问是运行在不同线程的没有访问的权限主线程和如何通信通过和发送和接收数据顺序主线程创建实例主线程通过向发消息线程收到消息开始处理任务处理完成通过把结果发送回主线程主线程通过接收结果基本用法主线程中使用发送数据给接收来自的消息收到的消息监听错误错误文件中接收主线程发送的消息返回结果给主线程终止在主线程中终止或在内部自杀使用创建内联输出垃圾回收机制分代回收将内存主要分为两部分通常包括新生代和老生代新生代存放生命周期短的对象空间小几垃圾回收频繁速度快而老生代包括经过多次回收仍然存活的对象新生代晋升的对象或生命周期长新生代对象通常比老生代对象更容易回收标记清除它将内存中的对象分为可达和不可达两类垃圾回收器首先标记所有可达对象然后清除不可达的对象这个过程涉及两个阶段标记阶段和清除阶段标记阶段从根元素开始垃圾回收器递归遍历所有对象并标记为可达对象标记表示对象是否被其他对象引用清除阶段垃圾回收器遍历所有未标记的对象即不可达的对象并将其从内存中清除网络安全攻击指的是攻击者在网页中注入恶意脚本当用户浏览网页时这些脚本会在用户的浏览器中执行通常是在用户评论留言板或用户生成的内容中当用户访问这个评论恶意代码就会被执行从而窃取账号密码等敏感信息或进行恶意跳转控制页面行为等类型存储型恶意脚本被存入数据库用户访问时自动执行反射型恶意脚本通过参数传入并立即返回页面型攻击脚本注入到页面后通过操作执行防范措施对于用户输入的数据应该验证和过滤仅允许预期的安全的字符和内容通过不要包含特殊字符将用户输入的数据插入到之前要进行转义防止浏览器解释用户输入的内容为可执行代码严格限制等使用表单接口层严格校验数据格式长度字符类型攻击是指攻击者通过控制大量被攻陷的计算机向目标服务器发送大量请求耗尽资源使目标网站服务崩溃或无法响应正常用户请求表现服务器内存飙升响应极慢或直接宕机网络带宽被刷满拒绝正常请求大量无效请求造成数据库连接池耗尽防范措施开启流量清洗服务过滤异常设置请求速率限制防止刷接口对敏感操作增加验证如验证码人机验证配置应用防火墙对流量行为分析和拦截攻击是指攻击者诱导用户在登录状态下向受信任的网站发送非法请求从而执行未授权操作如转账改密码删除数据等防范措施使用服务端生成并校验每个表单请求中必须携带验证判断请求来源是否合法属性设置的或防止第三方请求携带对敏感操作使用验证码二次确认注入假设一个网页上的登陆表单该表单将用户提供的用户名和密码与数据库中的进行身份验证攻击者可以绕开身份验证假设你在网页中有一个登录表单用户输入用户名和密码后后台会执行类似这样的用户输入用户输入如果攻击者在用户名处输入最终拼接的语句变成了这条语句永远为真攻击者就可以绕过登录验证直接登录系统路由守卫是什么是提供的钩子函数用于在路由跳转前后进行拦截和控制比如用户权限校验登陆状态判断路由跳转前提示等类型说明常见用途全局前置守卫所有路由跳转前触发登录校验权限拦截全局后置守卫路由跳转后触发页面埋点清理操作路由独享守卫单个路由专属守卫单页权限控制组件内守卫在组件内使用访问组件前离开时逻辑处理全局前置守卫常用于登录状态判断和重定向动态添加路由当前路由没有匹配到任何路由记录路由独享守卫什么是跨域当你在前端页面中尝试向另一个接口发起请求时浏览器发现两个地址不是同源就会阻止请求或拒绝响应读取这就叫做跨域定义两个的协议域名端口三者必须完全相同才属于同源浏览器的同源策略限制了以下行为访问节点访问请求如何解决跨域问题推荐服务端设置响应头来允许跨域访问兼容性好仅限请求利用标签不受同源策略限制存在安全隐患不支持复杂请求请求头代理转发通过开发服务器中间层如的转发请求反向代理线上通过转发接口请求到目标服务不受同源策略限制中浏览器会发送几次请求分别是什么视请求类型而定可能是次也可能是次简单请求只发次请求方法是请求头是且值为或没有使用自定义头如非简单请求会发次请求方法为不是上述三种如携带自定义请求头如浏览器会先发送一个请求称为预检请求目的是问服务器我可以发这个跨域请求吗如果服务器响应头中包含等则浏览器才会继续发送实际请求',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2025-06-19 22:53:01',
+  postMainColor: '#32f178',
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#18171d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#f7f9fe')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/prism.css" media="defer" onload="this.media='all'"><meta name="generator" content="Hexo 7.3.0"></head><body data-type="anzhiyu"><div id="svg_bg"></div><div id="web_bg"></div><div id="an_music_bg"></div><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><img class="loading-img nolazyload" alt="加载头像" src="https://bu.dusays.com/2025/05/20/682c842f3ea68.jpg"/><div class="loading-image-dot"></div></div></div><script>const preloader = {
+  endLoading: () => {
+    document.getElementById('loading-box').classList.add("loaded");
+  },
+  initLoading: () => {
+    document.getElementById('loading-box').classList.remove("loaded")
+  }
+}
+window.addEventListener('load',()=> { preloader.endLoading() })
+setTimeout(function(){preloader.endLoading();},10000)
+
+if (true) {
+  document.addEventListener('pjax:send', () => { preloader.initLoading() })
+  document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+}</script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.10/progress_bar/progress_bar.css"/><script async="async" src="https://cdn.cbd.int/pace-js@1.2.4/pace.min.js" data-pace-options="{ &quot;restartOnRequestAfter&quot;:false,&quot;eventLag&quot;:false}"></script><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><div id="nav-group"><span id="blog_name"><div class="back-home-button"><i class="anzhiyufont anzhiyu-icon-grip-vertical"></i><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网页</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://cmeng.me" title="个人主页"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/siteicon/32.png" alt="个人主页"/><span class="back-menu-item-text">个人主页</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">项目</div><div class="back-menu-list"><a class="back-menu-item" href="#" title="我的项目"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/icon-Favroites" alt="我的项目"/><span class="back-menu-item-text">我的项目</span></a></div></div></div></div><a id="site-name" href="/" accesskey="h"><div class="title">晨梦记</div><i class="anzhiyufont anzhiyu-icon-house-chimney"></i></a><div id="he-plugin-simple"></div><script>var WIDGET = {
+  "CONFIG": {
+    "modules": "0124",
+    "background": "2",
+    "tmpColor": "FFFFFF",
+    "tmpSize": "16",
+    "cityColor": "FFFFFF",
+    "citySize": "16",
+    "aqiColor": "E8D87B",
+    "aqiSize": "16",
+    "weatherIconSize": "24",
+    "alertIconSize": "18",
+    "padding": "10px 10px 10px 10px",
+    "shadow": "0",
+    "language": "auto",
+    "borderRadius": "20",
+    "fixed": "true",
+    "vertical": "top",
+    "horizontal": "left",
+    "left": "20",
+    "top": "7.1",
+    "key": "df245676fb434a0691ead1c63341cd94"
+  }
+}
+</script><link rel="stylesheet" href="https://widget.qweather.net/simple/static/css/he-simple.css?v=1.4.0"/><script src="https://widget.qweather.net/simple/static/js/he-simple.js?v=1.4.0"></script></span><div class="mask-name-container"><div id="name-container"><a id="page-name" href="javascript:anzhiyu.scrollToDest(0, 500)">PAGE_NAME</a></div></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page faa-parent animated-hover" href="/"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-zhuye1"></use></svg><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-wenzhang"></use></svg><span> 博文</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-guidang"></use></svg><span> 归档</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-icon"></use></svg><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/logData/"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-y1"></use></svg><span> 日志</span></a></li></ul></div><div class="menus_item"><a class="site-page faa-parent animated-hover" href="/statistics/"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-m_reports"></use></svg><span> 统计</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-yanglazhuye"></use></svg><span> 生活</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/essay/"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-jinmao"></use></svg><span> 闲言碎语</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/fcircle/"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-computer-network-internet"></use></svg><span> 项目</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/music/"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-yinle"></use></svg><span> 音乐馆</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/album/"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-xiangce"></use></svg><span> 相册</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-a-Deliverydisongfasongzhifeiji"></use></svg><span> 关于</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/about/"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-aixin"></use></svg><span> 关于本人</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/comments/"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-liuyanban"></use></svg><span> 留言板</span></a></li><li><a class="site-page child faa-parent animated-hover" href="javascript:toRandomPost()"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-jinmao"></use></svg><span> 随便逛逛</span></a></li></ul></div></div></div><div id="nav-right"><div class="nav-button only-home" id="travellings_button" title="随机前往一个开往项目网站"><a class="site-page" onclick="anzhiyu.totraveling()" title="随机前往一个开往项目网站" href="javascript:void(0);" rel="external nofollow" data-pjax-state="external"><i class="anzhiyufont anzhiyu-icon-train"></i></a></div><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机前往一个文章" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-dice"></i></a></div><div class="nav-button" id="search-button"><a class="site-page social-icon search" href="javascript:void(0);" title="搜索🔍" accesskey="s"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span> 搜索</span></a></div><input id="center-console" type="checkbox"/><label class="widget" for="center-console" title="中控台" onclick="anzhiyu.switchConsole();"><i class="left"></i><i class="widget center"></i><i class="widget right"></i></label><div id="console"><div class="console-card-group-reward"><ul class="reward-all console-card"><li class="reward-item"><a href="/img/weichat-page.png" target="_blank"><img class="post-qr-code-img" alt="微信" src="/img/weichat-page.png"/></a><div class="post-qr-code-desc">微信</div></li></ul></div><div class="console-card-group"><div class="console-card-group-left"><div class="console-card" id="card-newest-comments"><div class="card-content"><div class="author-content-item-tips">互动</div><span class="author-content-item-title"> 最新评论</span></div><div class="aside-list"><span>正在加载中...</span></div></div></div><div class="console-card-group-right"><div class="console-card tags"><div class="card-content"><div class="author-content-item-tips">兴趣点</div><span class="author-content-item-title">寻找你感兴趣的领域</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/GUIYUAN/" style="font-size: 1.05rem;">GUIYUAN<sup>1</sup></a><a href="/tags/js/" style="font-size: 1.05rem;">js<sup>1</sup></a><a href="/tags/mySql/" style="font-size: 1.05rem;">mySql<sup>1</sup></a><a href="/tags/vue/" style="font-size: 1.05rem;">vue<sup>1</sup></a><a href="/tags/vue3/" style="font-size: 1.05rem;">vue3<sup>1</sup></a><a href="/tags/%E7%BB%8F%E9%AA%8C/" style="font-size: 1.05rem;">经验<sup>1</sup></a><a href="/tags/%E9%85%8D%E7%BD%AE/" style="font-size: 1.05rem;">配置<sup>1</sup></a><a href="/tags/%E9%9D%A2%E8%AF%95/" style="font-size: 1.05rem;">面试<sup>1</sup></a><a href="/tags/%E9%A1%B9%E7%9B%AE/" style="font-size: 1.05rem;">项目<sup>1</sup></a></div></div><hr/></div></div><div class="console-card history"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-box-archiv"></i><span>文章</span></div><div class="card-archives"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/05/"><span class="card-archive-list-date">五月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/04/"><span class="card-archive-list-date">四月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">8</span><span>篇</span></div></a></li></ul></div><hr/></div></div></div><div class="button-group"><div class="console-btn-item"><a class="darkmode_switchbutton" title="显示模式切换" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-moon"></i></a></div><div class="console-btn-item" id="consoleHideAside" onclick="anzhiyu.hideAsideBtn()" title="边栏显示控制"><a class="asideSwitch"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></a></div><div class="console-btn-item" id="consoleMusic" onclick="anzhiyu.musicToggle()" title="音乐开关"><a class="music-switch"><i class="anzhiyufont anzhiyu-icon-music"></i></a></div></div><div class="console-mask" onclick="anzhiyu.hideConsole()" href="javascript:void(0);"></div></div><div class="nav-button" id="nav-totop"><a class="totopbtn" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i><span id="percent" onclick="anzhiyu.scrollToDest(0,500)">0</span></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);" title="切换"><i class="anzhiyufont anzhiyu-icon-bars"></i></a></div></div></div></nav><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original">原创</a><span class="post-meta-categories"><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-inbox post-meta-icon"></i><a class="post-meta-categories" href="/categories/js/" itemprop="url">js</a></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/js/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>js</span></a></span></div></div><h1 class="post-title" itemprop="name headline">js学习笔记</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" itemprop="dateCreated datePublished" datetime="2025-04-15T09:24:50.000Z" title="发表于 2025-04-15 17:24:50">2025-04-15</time><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-history post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" itemprop="dateCreated datePublished" datetime="2025-06-19T14:53:01.651Z" title="更新于 2025-06-19 22:53:01">2025-06-19</time></span></div><div class="meta-secondline"><span class="post-meta-separator"></span><span class="post-meta-wordcount"><i class="anzhiyufont anzhiyu-icon-file-word post-meta-icon" title="文章字数"></i><span class="post-meta-label" title="文章字数">字数总计:</span><span class="word-count" title="文章字数">7.1k</span><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-clock post-meta-icon" title="阅读时长"></i><span class="post-meta-label" title="阅读时长">阅读时长:</span><span>25分钟</span></span><span class="post-meta-separator"></span><span class="post-meta-pv-cv" id="" data-flag-title="js学习笔记"><i class="anzhiyufont anzhiyu-icon-fw-eye post-meta-icon"></i><span class="post-meta-label" title="阅读量">阅读量:</span><span id="busuanzi_value_page_pv"><i class="anzhiyufont anzhiyu-icon-spinner anzhiyu-spin"></i></span></span><span class="post-meta-separator">       </span><span class="post-meta-position" title="作者IP属地为苏州"><i class="anzhiyufont anzhiyu-icon-location-dot"></i>苏州</span></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="3"></use><use href="#gentle-wave" x="48" y="5"></use><use href="#gentle-wave" x="48" y="7"></use></g></svg></section><div id="post-top-cover"><img class="nolazyload" id="post-top-bg" src="https://bu.dusays.com/2025/06/19/68541c91d11be.jpg"></div></header><main id="blog-container"><div class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container" itemscope itemtype="http://example.com/js/"><header><a class="post-meta-categories" href="/categories/js/" itemprop="url">js</a><a href="/tags/js/" tabindex="-1" itemprop="url">js</a><h1 id="CrawlerTitle" itemprop="name headline">js学习笔记</h1><span itemprop="author" itemscope itemtype="http://schema.org/Person">晨梦</span><time itemprop="dateCreated datePublished" datetime="2025-04-15T09:24:50.000Z" title="发表于 2025-04-15 17:24:50">2025-04-15</time><time itemprop="dateCreated datePublished" datetime="2025-06-19T14:53:01.651Z" title="更新于 2025-06-19 22:53:01">2025-06-19</time></header>
+<h3 style="text-align: left;" >什么是闭包有什么用</h3>
+
+<p>闭包是内部函数引用外部函数局部变量的一个引用关系，这个引用关系是用一个对象去描述的，这个对象存在于内部函数对象身上closure,外部函数调用几次就有几套独立机制的闭包机制<br>产生条件：函数嵌套函数；内部函数引用外部函数的局部变量；调用外部函数时就产生闭包，闭包不是在调用函数内部时产生的，而是在创建内部函数对象时产生。<br>作用：延长局部变量的生命周期，让函数外部间接操作内部的局部变量, 保护变量不被销毁（持久化变量）比如计数器、节流防抖中，都需要保存状态变量。<br>缺点：闭包分为临时闭包和永久闭包，永久闭包不会被销毁就可能产生内存泄漏，所以闭包使用完成，记得手动释放，让内部函数对象成为垃圾对象，断开指向它的所有引用<br>用到过 闭包的场景：</p>
+<p><strong>防抖函数</strong>：这里 timer 变量在返回的函数中被引用，形成闭包，使得它不会被销毁。防抖函数通过闭包保存了 timer 变量，让每次触发时都可以取消上一次的定时器，只保留最后一次，从而实现“最后一次操作后才触发”的效果。</p>
+<pre class="language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">debounce</span><span class="token punctuation">(</span><span class="token parameter">fn<span class="token punctuation">,</span> delay</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">let</span> timer <span class="token operator">=</span> <span class="token keyword">null</span> <span class="token comment">// 定义一个定时器变量</span>
+  <span class="token keyword">return</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token operator">...</span>args</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span> <span class="token comment">//接收任意数量的参数，并把它们收集到一个数组里。</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>timer<span class="token punctuation">)</span> <span class="token function">clearTimeout</span><span class="token punctuation">(</span>timer<span class="token punctuation">)</span> <span class="token comment">// 每次调用时都清除前一个定时器</span>
+    <span class="token comment">// 重新设置定时器，等 delay 毫秒后执行</span>
+    timer <span class="token operator">=</span> <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token function">fn</span><span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span> args<span class="token punctuation">)</span><span class="token punctuation">,</span> delay<span class="token punctuation">)</span>
+    <span class="token comment">// 过 delay 毫秒后，调用 fn 函数，并把你传入的参数原封不动地传进去，同时保持 this 不变。</span>
+  <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span></code></pre>
+
+<h3 style="text-align: left;" >如何遍历对象</h3>
+
+
+<ol>
+<li>使用 for…in（遍历可枚举属性，包括继承的属性） <pre class="language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">const</span> obj <span class="token operator">=</span> <span class="token punctuation">&#123;</span> <span class="token literal-property property">a</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token literal-property property">b</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token literal-property property">c</span><span class="token operator">:</span> <span class="token number">3</span> <span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> key <span class="token keyword">in</span> obj<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>key<span class="token punctuation">,</span> obj<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+</code></pre></li>
+<li>使用 Object.keys()（获取自身可枚举的“键”） <pre class="language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">const</span> obj <span class="token operator">=</span> <span class="token punctuation">&#123;</span> <span class="token literal-property property">a</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token literal-property property">b</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token literal-property property">c</span><span class="token operator">:</span> <span class="token number">3</span> <span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> keys <span class="token operator">=</span> Object<span class="token punctuation">.</span><span class="token function">keys</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  keys<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token parameter">key</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>key<span class="token punctuation">,</span> obj<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></li>
+<li>使用 Object.entries()（获取键值对数组） <pre class="language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">const</span> obj <span class="token operator">=</span> <span class="token punctuation">&#123;</span> <span class="token literal-property property">a</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token literal-property property">b</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token literal-property property">c</span><span class="token operator">:</span> <span class="token number">3</span> <span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> entries <span class="token operator">=</span> Object<span class="token punctuation">.</span><span class="token function">entries</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  entries<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">[</span>key<span class="token punctuation">,</span> value<span class="token punctuation">]</span></span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>key<span class="token punctuation">,</span> value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></li>
+<li>使用 Reflect.ownKeys()（获取所有自身属性，包括不可枚举和 symbol）  <pre class="language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">const</span> obj <span class="token operator">=</span> <span class="token punctuation">&#123;</span> <span class="token literal-property property">a</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token literal-property property">b</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token literal-property property">c</span><span class="token operator">:</span> <span class="token number">3</span> <span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+  Reflect<span class="token punctuation">.</span><span class="token function">ownKeys</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token parameter">key</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>key<span class="token punctuation">,</span> obj<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></li>
+</ol>
+
+<h3 style="text-align: left;" >如何判断JS的数据类型</h3>
+
+<p>首先想到的是 typeof 但是typeof在检验null、对象、或者数组是不能检测出精准的数据类型，都会返回object。<br>然后想到a instanceof b 专门判断对象的数据,检查a的隐式原型属性是与b的显示原型</p>
+<pre class="language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">null</span> <span class="token keyword">instanceof</span> <span class="token class-name">Object</span> <span class="token comment">// false</span>
+<span class="token punctuation">(</span><span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span><span class="token punctuation">)</span> <span class="token keyword">instanceof</span> <span class="token class-name">Object</span> <span class="token comment">// true</span>
+<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token keyword">instanceof</span> <span class="token class-name">Object</span> <span class="token comment">// true</span>
+<span class="token punctuation">(</span><span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span><span class="token punctuation">)</span> <span class="token keyword">instanceof</span> <span class="token class-name">Array</span> <span class="token comment">// false</span>
+<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token keyword">instanceof</span> <span class="token class-name">Array</span> <span class="token comment">// true</span></code></pre>
+<p>结论： 任何对象的instanceof Object都是true无法帮我们判定死是否是对象或者数组<br>判断是否为数组Array.isArray()<br>最终办法： Object.prototype.toString.call(obj).slice(8,-1)</p>
+
+<h3 style="text-align: left;" >说说常见的数组方法</h3>
+
+
+<h3 style="text-align: left;" >防抖和节流</h3>
+
+
+<p><strong>防抖</strong>：在事件触发后一段时间<strong>只执行一次</strong>，如果在这段时间内事件被重新触发，则重新计时。搜索框输入联想、防止按钮连点、resize、scroll等高频操作优化<br><strong>节流</strong>：	一定时间内<strong>只执行一次</strong>，即使事件持续触发，也只会每隔设定时间执行一次。页面滚动监听、拖拽事件、游戏中的按键响应、窗口 resize 监听<br>防抖代码:当事件触发后，会设置一个定时器，在指定的延迟时间后在执行相应的操作，如果在延迟时间内再次触发了同一事件，那么就会清除之前的定时器，并重新设置新的定时器直到事件触发完成</p>
+<pre class="language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">debounce</span><span class="token punctuation">(</span><span class="token parameter">fn<span class="token punctuation">,</span> delay</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">let</span> timer <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token operator">...</span>args</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token function">clearTimeout</span><span class="token punctuation">(</span>timer<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    timer <span class="token operator">=</span> <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
+      <span class="token function">fn</span><span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span> args<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span><span class="token punctuation">,</span> delay<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span></code></pre>
+
+<p>节流代码：当事件触发后，事件处理函数会在固定的时间间隔内执行，即使事件被频繁触发也是如此</p>
+<pre class="language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">throttle</span><span class="token punctuation">(</span><span class="token parameter">fn<span class="token punctuation">,</span> delay</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">let</span> lastTime <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token operator">...</span>args</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">const</span> now <span class="token operator">=</span> Date<span class="token punctuation">.</span><span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>now <span class="token operator">-</span> lastTime <span class="token operator">></span> delay<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+      <span class="token function">fn</span><span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span> args<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      lastTime <span class="token operator">=</span> now<span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+  <span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+</code></pre>
+
+<h3 style="text-align: left;" >GET 和 POST 请求的区别</h3>
+
+
+<p>🔢 <strong>背景</strong>：最初是浏览器与服务器之间的通讯协议，GET用于读取资源，POST用于提交表单，后来被扩充到接口格式的定义，GET和POST作为接口的请求方式<br>🧭 <strong>区别</strong>：</p>
+<ul>
+<li>传参方式不同<br>GET：参数拼接在 URL 后面，格式为例：&#x2F;api&#x2F;user?id&#x3D;123<br>POST：参数放在 请求体（body） 中，不会出现在 URL 中。例子：请求体中 {“id”: 123}</li>
+<li>安全性对比<br>GET：参数暴露在 URL 中，不适合传输敏感信息（如密码）。易被浏览器缓存，参数也可能被记录在浏览历史中。<br>POST：相对更安全（虽然本质上也不加密），因为参数藏在请求体中。</li>
+<li>数据长度限制<br>GET： URL 有长度限制（不同浏览器&#x2F;服务器限制不同，通常在 2KB～8KB）。<br>POST：理论上没有大小限制，适合上传大文件或大量数据。</li>
+<li>浏览器行为<br>GET 请求可以被收藏、缓存、重复提交（刷新不弹窗）。能由浏览器自动发起（如img-src,资源加载）<br>POST 请求不能被浏览器缓存，刷新会弹出“是否重新提交表单”提示。</li>
+</ul>
+
+<hr/>
+<h3 style="text-align: left;" >强缓存和协商缓存</h3>
+
+
+<p>🧱 <strong>强缓存</strong>（Strong Cache）<br>浏览器 <strong>先检查本地缓存是否可用</strong>，如果可用则直接使用，不发起请求。<br>常见字段</p>
+<ul>
+<li>Expires（HTTP&#x2F;1.0）：设置一个 绝对时间点（GMT格式）</li>
+<li>Cache-Control（HTTP&#x2F;1.1）：设置相对时间（如 max-age&#x3D;3600 表示缓存 1 小时）</li>
+</ul>
+<pre class="language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// 表示该资源在缓存中可以保存 3600 秒内不再请求服务器。</span>
+Cache<span class="token operator">-</span>Control<span class="token operator">:</span> max<span class="token operator">-</span>age<span class="token operator">=</span><span class="token number">3600</span></code></pre>
+<p>🧱 <strong>协商缓存</strong>（Negotiation Cache）<br>当强缓存失效时，浏览器会向服务器发送请求，并携带资源的 <strong>标识信息</strong>（如时间戳或文件哈希）进行协商。</p>
+<ul>
+<li>如果资源没变，返回 304 Not Modified，浏览器使用缓存。</li>
+<li>如果资源变了，返回 200 OK 和新资源。<br/></li>
+</ul>
+<p>协商机制:<br>ETag + If-None-Match<br>ETag 是资源内容的哈希值。浏览器下次请求带上 If-None-Match，服务器判断是否相同。</p>
+<pre class="language-javascript" data-language="javascript"><code class="language-javascript"><span class="token literal-property property">ETag</span><span class="token operator">:</span> <span class="token string">"abc123"</span>
+If<span class="token operator">-</span>None<span class="token operator">-</span>Match<span class="token operator">:</span> <span class="token string">"abc123"</span>
+</code></pre>
+<p><strong>❓ 为什么有了强缓存还需要协商缓存？</strong><br>✅ 原因一：强缓存有时间限制</p>
+<ul>
+<li>强缓存依赖 max-age 或 Expires，缓存一旦过期就会失效。</li>
+<li>浏览器此时需要向服务器确认资源是否更新 —— 就用协商缓存来减少资源浪费。</li>
+</ul>
+<p>✅ 原因二：资源可能在有效期内就更新了</p>
+<ul>
+<li>比如 max-age&#x3D;3600，但 10 分钟后服务器更新了资源，客户端还在用旧的缓存内容。</li>
+<li>这时只有协商缓存能解决这个问题：它允许服务器来判断资源是否真的需要更新。<br>所以强缓存 + 协商缓存是浏览器缓存的两道防线，优先走强缓存，失败后才协商。都失败才会下载新资源，减少带宽浪费，提高性能。</li>
+</ul>
+
+<h3 style="text-align: left;" >项目中有没有用过缓存策略？怎么设置的？</h3>
+
+
+<ol>
+<li><p>请求头缓存（服务端缓存策略）<br>配合后台设置缓存头，比如：<br>Cache-Control: max-age&#x3D;3600<br>前端可以利用浏览器强缓存，不重复请求资源</p>
+</li>
+<li><p>组件层面的缓存 —— 页面切换时保留状态,提高页面切换性能。</p>
+</li>
+</ol>
+<p>🧩 使用场景：<br>比如在一个“列表页 → 详情页”切换中，返回列表时希望保留滚动位置、搜索条件等状态。<br>🧩 设置方式：</p>
+<pre class="language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&lt;</span>template<span class="token operator">></span>
+  <span class="token operator">&lt;</span>keep<span class="token operator">-</span>alive include<span class="token operator">=</span><span class="token string">"UserList"</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span>RouterView <span class="token operator">/</span><span class="token operator">></span>
+  <span class="token operator">&lt;</span><span class="token operator">/</span>keep<span class="token operator">-</span>alive<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>template<span class="token operator">></span></code></pre>
+<p>或使用 Vue Router 的 meta 字段 + 动态 include：</p>
+<pre class="language-javascript" data-language="javascript"><code class="language-javascript"><span class="token punctuation">&#123;</span>
+  <span class="token literal-property property">path</span><span class="token operator">:</span> <span class="token string">'/user/list'</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'UserList'</span><span class="token punctuation">,</span>
+  <span class="token function-variable function">component</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token keyword">import</span><span class="token punctuation">(</span><span class="token string">'@/views/UserList.vue'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">meta</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span> <span class="token literal-property property">keepAlive</span><span class="token operator">:</span> <span class="token boolean">true</span> <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span></code></pre>
+<pre class="language-vue" data-language="vue"><code class="language-vue">&lt;keep-alive&gt;
+  &lt;router-view v-slot&#x3D;&quot;&#123; Component, route &#125;&quot;&gt;
+    &lt;component :is&#x3D;&quot;Component&quot; v-if&#x3D;&quot;route.meta.keepAlive&quot; &#x2F;&gt;
+  &lt;&#x2F;router-view&gt;
+&lt;&#x2F;keep-alive&gt;</code></pre>
+<ol start="3">
+<li>请求接口层面的缓存 —— 减少重复请求、提高响应速度</li>
+</ol>
+<p>🧩 使用场景：<br>做的管理端里，比如新建用户要选择部门，这个下拉框来源于接口 &#x2F;api&#x2F;dept&#x2F;list 这个部门列表基本不会变，但每次打开这个页面都发一次请求？多页面还会重复请求？<br>请求一次之后，缓存起来，下次直接使用缓存：</p>
+<pre class="language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// 缓存在 Pinia 或 memory 中</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>deptList<span class="token punctuation">.</span>length<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">const</span> res <span class="token operator">=</span> <span class="token keyword">await</span> axios<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'/api/dept/list'</span><span class="token punctuation">)</span>
+  deptList<span class="token punctuation">.</span>value <span class="token operator">=</span> res<span class="token punctuation">.</span>data
+<span class="token punctuation">&#125;</span></code></pre>
+<p><strong>如果我缓存了数据，那怎么知道它已经变化、该重新请求了？</strong></p>
+<ul>
+<li>用户主动触发（最常见方式）await getExamList() &#x2F;&#x2F; 重新拉取，更新缓存</li>
+<li>设置过期时间（自动判断）比如你把数据存在 localStorage 里，可以加个时间戳判断是否“过期”：</li>
+<li>后台返回版本号 &#x2F; 时间戳 &#x2F; 哈希（高级策略）<br>这个常用于大公司大型项目，服务端接口会返回一个 version 或 lastModified 字段：<pre class="language-javascript" data-language="javascript"><code class="language-javascript"><span class="token punctuation">&#123;</span>
+  <span class="token string-property property">"data"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token operator">...</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token string-property property">"version"</span><span class="token operator">:</span> <span class="token string">"v3.2"</span><span class="token punctuation">,</span>
+  <span class="token string-property property">"lastModified"</span><span class="token operator">:</span> <span class="token string">"2025-04-14T10:32:00"</span>
+<span class="token punctuation">&#125;</span></code></pre>
+前端请求时带上这个标识：<pre class="language-typescript" data-language="typescript"><code class="language-typescript">axios<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'/api/news/list'</span><span class="token punctuation">,</span> <span class="token punctuation">&#123;</span>
+  headers<span class="token operator">:</span> <span class="token punctuation">&#123;</span> <span class="token string-property property">'If-Modified-Since'</span><span class="token operator">:</span> lastModified <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">)</span>
+</code></pre>
+服务端会判断数据有没有变，如果没变就返回 304 Not Modified，这其实就是「协商缓存」的思想。</li>
+</ul>
+
+<h3 style="text-align: left;" >浏览器存储的方式有哪些</h3>
+
+
+<p>cookie<strong>保存状态</strong>  LocalStorage <strong>存储东西</strong></p>
+<h4 id="Cookie"><a href="#Cookie" class="headerlink" title="Cookie"></a>Cookie</h4><p>它的诞生是为了解决HTTP协议的无状态问题，服务器无法识别不同用户或跟踪用户的状态，但也导致了一些问题比如无法保持用户的登陆状态等<br>主要用于会话管理，如登录状态（token），也可存储少量数据。<br>每次请求都会自动携带到服务器，适合服务器识别用户。<strong>会过期</strong></p>
+<pre class="language-javascript" data-language="javascript"><code class="language-javascript">document<span class="token punctuation">.</span>cookie <span class="token operator">=</span> <span class="token string">"username=Tom; expires=Fri, 31 Dec 2025 23:59:59 GMT"</span></code></pre>
+<h4 id="LocalStorage"><a href="#LocalStorage" class="headerlink" title="LocalStorage"></a>LocalStorage</h4><p>数据长期保留，除非手动删除<br>适合存储：用户设置、主题偏好、缓存列表等。</p>
+<pre class="language-javascript" data-language="javascript"><code class="language-javascript">localStorage<span class="token punctuation">.</span><span class="token function">setItem</span><span class="token punctuation">(</span><span class="token string">'token'</span><span class="token punctuation">,</span> <span class="token string">'abc123'</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> token <span class="token operator">=</span> localStorage<span class="token punctuation">.</span><span class="token function">getItem</span><span class="token punctuation">(</span><span class="token string">'token'</span><span class="token punctuation">)</span></code></pre>
+<h4 id="SessionStorage"><a href="#SessionStorage" class="headerlink" title="SessionStorage"></a>SessionStorage</h4><p>仅当前“标签页”有效，关闭页面就清空。<br>适合存储：表单填写中间状态、当前页状态。</p>
+<pre class="language-javascript" data-language="javascript"><code class="language-javascript">sessionStorage<span class="token punctuation">.</span><span class="token function">setItem</span><span class="token punctuation">(</span><span class="token string">'step'</span><span class="token punctuation">,</span> <span class="token string">'2'</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> step <span class="token operator">=</span> sessionStorage<span class="token punctuation">.</span><span class="token function">getItem</span><span class="token punctuation">(</span><span class="token string">'step'</span><span class="token punctuation">)</span></code></pre>
+<h4 id="IndexedDB"><a href="#IndexedDB" class="headerlink" title="IndexedDB"></a>IndexedDB</h4><p>特点：浏览器内建的 MySQL 数据库，支持结构化数据、事务、索引。<br>适合场景：大数据缓存、本地搜索数据、本地聊天记录、离线应用。</p>
+<p><strong>登陆的token放cookie还是放localstrorage</strong><br>🎯 结论先说：<br>如果你对安全要求较高，推荐放在 Cookie 中，并设置 HttpOnly + Secure。否则，放在 localStorage 也可以，简单易用但安全性略差。容易被 XSS 攻击读出 token → 导致用户身份泄露。<br>❗ Cookie 的坑：如果设置了跨域请求，需要加上：axios.defaults.withCredentials &#x3D; true<br>并配合后端 Access-Control-Allow-Credentials: true<br>👇 那么什么时候用 Cookie？什么时候用 localStorage？<br>✅ 选择 Cookie 的场景（安全优先）：</p>
+<ul>
+<li>登录态需要被服务器自动识别（比如传统服务端渲染项目）</li>
+<li>对安全性要求较高的项目（如后台管理系统）</li>
+<li>想防止 XSS 窃取 token（使用 HttpOnly）<pre class="language-javascript" data-language="javascript"><code class="language-javascript">Set<span class="token operator">-</span>Cookie<span class="token operator">:</span> token<span class="token operator">=</span>abc123<span class="token punctuation">;</span> HttpOnly<span class="token punctuation">;</span> Secure<span class="token punctuation">;</span> SameSite<span class="token operator">=</span>Strict</code></pre></li>
+</ul>
+<p><strong>🔐 Cookie + HttpOnly 方案中，token 过期怎么办？</strong></p>
+<p class='p cyan'>短效 token + 刷新 token blue</p>
+<p>服务端设置两个 Cookie：<br>access_token：短效，5-15分钟过期，HttpOnly<br>refresh_token：长效，7天-30天过期，HttpOnly<br><strong>流程如下：</strong><br>1.前端发请求，access_token 自动随 Cookie 发送<br>2.如果接口返回 401（token 过期），前端自动调用「刷新 token 接口」<br>3.服务端验证 refresh_token，返回新的 access_token<br>4.前端重试原请求<br>后端设置 Cookie 的时候可以指定 Expires 或 Max-Age：</p>
+<pre class="language-javascript" data-language="javascript"><code class="language-javascript">Set<span class="token operator">-</span>Cookie<span class="token operator">:</span> access_token<span class="token operator">=</span>abc123<span class="token punctuation">;</span> HttpOnly<span class="token punctuation">;</span> Secure<span class="token punctuation">;</span> SameSite<span class="token operator">=</span>Strict<span class="token punctuation">;</span> Max<span class="token operator">-</span>Age<span class="token operator">=</span><span class="token number">900</span>
+Set<span class="token operator">-</span>Cookie<span class="token operator">:</span> refresh_token<span class="token operator">=</span>xyz456<span class="token punctuation">;</span> HttpOnly<span class="token punctuation">;</span> Secure<span class="token punctuation">;</span> SameSite<span class="token operator">=</span>Strict<span class="token punctuation">;</span> Max<span class="token operator">-</span>Age<span class="token operator">=</span><span class="token number">604800</span>
+</code></pre>
+<p>access_token 15 分钟过期 refresh_token 7 天过期</p>
+<p>✅ 选择 localStorage 的场景（灵活易用）：</p>
+<ul>
+<li>单页应用（SPA）前后端完全分离</li>
+<li>使用 JWT + 手动加请求头（如 axios 拦截器）</li>
+<li>对安全要求不是极高，但追求开发便利</li>
+</ul>
+<pre class="language-javascript" data-language="javascript"><code class="language-javascript">  <span class="token comment">// 请求拦截器：在每个请求发送之前都添加 token 到请求头</span>
+instance<span class="token punctuation">.</span>interceptors<span class="token punctuation">.</span>request<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>
+  <span class="token punctuation">(</span><span class="token parameter">config</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
+    <span class="token comment">// 获取 token，假设存储在 localStorage 中</span>
+    <span class="token keyword">const</span> token <span class="token operator">=</span> localStorage<span class="token punctuation">.</span><span class="token function">getItem</span><span class="token punctuation">(</span><span class="token string">'token'</span><span class="token punctuation">)</span>
+    <span class="token comment">// 如果 token 存在，则在请求头中添加</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>token<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+      config<span class="token punctuation">.</span>headers<span class="token punctuation">[</span><span class="token string">'Authorization '</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">$&#123;</span>token<span class="token interpolation-punctuation punctuation">&#125;</span></span><span class="token template-punctuation string">`</span></span>
+    <span class="token punctuation">&#125;</span>
+    <span class="token keyword">return</span> config
+  <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+  <span class="token punctuation">(</span><span class="token parameter">error</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">return</span> Promise<span class="token punctuation">.</span><span class="token function">reject</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span>
+  <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+<span class="token punctuation">)</span></code></pre>
+
+<h3 style="text-align: left margin-top:'100px';" >浅拷贝和深拷贝</h3>
+
+<h4 id="浅拷贝"><a href="#浅拷贝" class="headerlink" title="浅拷贝"></a>浅拷贝</h4><p>拷贝对象的第一层属性值，如果属性是引用类型（如对象、数组），只拷贝地址，不复制内容。修改嵌套对象，会影响原对象。<br>总结一句话： 第一层复制，内部引用地址共享</p>
+<pre class="language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">const</span> obj1 <span class="token operator">=</span> <span class="token punctuation">&#123;</span> <span class="token literal-property property">a</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token literal-property property">b</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span> <span class="token literal-property property">c</span><span class="token operator">:</span> <span class="token number">2</span> <span class="token punctuation">&#125;</span> <span class="token punctuation">&#125;</span>
+<span class="token keyword">const</span> obj2 <span class="token operator">=</span> <span class="token punctuation">&#123;</span> <span class="token operator">...</span>obj1 <span class="token punctuation">&#125;</span> <span class="token comment">// 浅拷贝</span>
+obj2<span class="token punctuation">.</span>b<span class="token punctuation">.</span>c <span class="token operator">=</span> <span class="token number">999</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>obj1<span class="token punctuation">.</span>b<span class="token punctuation">.</span>c<span class="token punctuation">)</span> <span class="token comment">// 999 </span></code></pre>
+<p>常见方法：<br>Object.assign({}, obj)<br>{ …obj }</p>
+<h4 id="深拷贝"><a href="#深拷贝" class="headerlink" title="深拷贝"></a>深拷贝</h4><p>拷贝对象及其所有层级的值，互不影响。总结一句话：层层复制，彻底独立<br>浅拷贝：只复制一层引用，适合不修改嵌套属性的场景；<br>深拷贝：彻底复制每一层，适合需要修改嵌套结构的场景。编辑场景&#x2F;撤销功能,就必须保存独立的一份完整拷贝，这样以后回退时才不会影响原始数据 —— 所以要用 深拷贝！</p>
+<pre class="language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">const</span> obj1 <span class="token operator">=</span> <span class="token punctuation">&#123;</span> <span class="token literal-property property">a</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token literal-property property">b</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span> <span class="token literal-property property">c</span><span class="token operator">:</span> <span class="token number">2</span> <span class="token punctuation">&#125;</span> <span class="token punctuation">&#125;</span>
+<span class="token keyword">const</span> obj2 <span class="token operator">=</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span><span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span>obj1<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">// 简单深拷贝</span>
+obj2<span class="token punctuation">.</span>b<span class="token punctuation">.</span>c <span class="token operator">=</span> <span class="token number">999</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>obj1<span class="token punctuation">.</span>b<span class="token punctuation">.</span>c<span class="token punctuation">)</span> <span class="token comment">// 2 </span></code></pre>
+<p>常见方法：<br>const newObj &#x3D; JSON.parse(JSON.stringify(obj)) ❌ 会丢失：函数、undefined、Symbol、循环引用等<br>const deepCopy &#x3D; structuredClone(obj) （现代浏览器支持）<br><strong>手写深拷贝（递归）</strong></p>
+<pre class="language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">deepClone</span><span class="token punctuation">(</span><span class="token parameter">obj</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>obj <span class="token operator">===</span> <span class="token keyword">null</span> <span class="token operator">||</span> <span class="token keyword">typeof</span> obj <span class="token operator">!==</span> <span class="token string">'object'</span><span class="token punctuation">)</span> <span class="token keyword">return</span> obj
+  <span class="token keyword">const</span> result <span class="token operator">=</span> Array<span class="token punctuation">.</span><span class="token function">isArray</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span> <span class="token operator">?</span> <span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">:</span> <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">const</span> key <span class="token keyword">in</span> obj<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    result<span class="token punctuation">[</span>key<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">deepClone</span><span class="token punctuation">(</span>obj<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">)</span>
+  <span class="token punctuation">&#125;</span>
+  <span class="token keyword">return</span> result
+<span class="token punctuation">&#125;</span></code></pre>
+<p>🚨 浅拷贝带来的常见 bug</p>
+<pre class="language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">const</span> state <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
+  <span class="token literal-property property">user</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+    <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'Tom'</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">age</span><span class="token operator">:</span> <span class="token number">18</span>
+  <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token keyword">const</span> copy <span class="token operator">=</span> <span class="token punctuation">&#123;</span> <span class="token operator">...</span>state <span class="token punctuation">&#125;</span>
+copy<span class="token punctuation">.</span>user<span class="token punctuation">.</span>age <span class="token operator">=</span> <span class="token number">20</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>state<span class="token punctuation">.</span>user<span class="token punctuation">.</span>age<span class="token punctuation">)</span> <span class="token comment">// 变成了 20，浅拷贝坑</span></code></pre>
+
+<h3 style="text-align: left;" >数组去重的方法（3种）</h3>
+
+
+<ol>
+<li><strong>用 Set 只允许存储唯一的值</strong><pre class="language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">const</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">]</span>
+<span class="token keyword">const</span> uniqueArr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token operator">...</span><span class="token keyword">new</span> <span class="token class-name">Set</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">]</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>uniqueArr<span class="token punctuation">)</span> <span class="token comment">// [1, 2, 3, 4]</span>
+</code></pre></li>
+<li><strong>利用filter方法来遍历数组，只保留第一次出现的元素</strong><pre class="language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">const</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">]</span>
+<span class="token keyword">const</span> uniqueArr <span class="token operator">=</span> arr<span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">item<span class="token punctuation">,</span> index</span><span class="token punctuation">)</span> <span class="token operator">=></span> arr<span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span> <span class="token operator">===</span> index<span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>uniqueArr<span class="token punctuation">)</span> <span class="token comment">// [1, 2, 3, 4]</span>
+</code></pre></li>
+<li><strong>使用reduce方法逐个遍历数组元素，构建一个新的数组，只添加第一次出现的元素</strong><pre class="language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">const</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">]</span>
+<span class="token keyword">const</span> uniqueArr <span class="token operator">=</span> arr<span class="token punctuation">.</span><span class="token function">reduce</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">acc<span class="token punctuation">,</span> cur</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>acc<span class="token punctuation">.</span><span class="token function">includes</span><span class="token punctuation">(</span>cur<span class="token punctuation">)</span><span class="token punctuation">)</span> acc<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>cur<span class="token punctuation">)</span>
+  <span class="token keyword">return</span> acc
+<span class="token punctuation">&#125;</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>uniqueArr<span class="token punctuation">)</span> <span class="token comment">// [1, 2, 3, 4]</span></code></pre></li>
+</ol>
+
+<h3 style="text-align: left;" >介绍下promise.all </h3>
+
+
+<p>工作中经常用到它来<strong>并发请求多个接口、等待所有结果</strong>比如同时加载多个接口数据（页面初始化），并行上传多个文件，并发处理多个异步任务（比如图片、资源等）等<br>✅ 一句话介绍：</p>
+<div class="note simple"><p>Promise.all 用于并行执行多个 Promise，等全部成功才返回，其中任何一个失败都会进入 .catch。</p>
+</div>
+<pre class="language-javascript" data-language="javascript"><code class="language-javascript">Promise<span class="token punctuation">.</span><span class="token function">all</span><span class="token punctuation">(</span><span class="token punctuation">[</span>promise1<span class="token punctuation">,</span> promise2<span class="token punctuation">,</span> promise3<span class="token punctuation">]</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">[</span>res1<span class="token punctuation">,</span> res2<span class="token punctuation">,</span> res3<span class="token punctuation">]</span></span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
+    <span class="token comment">// 所有成功，按顺序拿结果</span>
+  <span class="token punctuation">&#125;</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">catch</span><span class="token punctuation">(</span><span class="token parameter">error</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
+    <span class="token comment">// 只要有一个失败，就走这里</span>
+  <span class="token punctuation">&#125;</span><span class="token punctuation">)</span>
+</code></pre>
+<p>场景：</p>
+<pre class="language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">const</span> <span class="token function-variable function">getUser</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> axios<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'/api/user'</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> <span class="token function-variable function">getRoles</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> axios<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'/api/roles'</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> <span class="token function-variable function">getMenu</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> axios<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'/api/menu'</span><span class="token punctuation">)</span>
+
+Promise<span class="token punctuation">.</span><span class="token function">all</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token function">getUser</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">getRoles</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">getMenu</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">[</span>userRes<span class="token punctuation">,</span> rolesRes<span class="token punctuation">,</span> menuRes<span class="token punctuation">]</span></span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'用户信息:'</span><span class="token punctuation">,</span> userRes<span class="token punctuation">.</span>data<span class="token punctuation">)</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'角色信息:'</span><span class="token punctuation">,</span> rolesRes<span class="token punctuation">.</span>data<span class="token punctuation">)</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'菜单信息:'</span><span class="token punctuation">,</span> menuRes<span class="token punctuation">.</span>data<span class="token punctuation">)</span>
+  <span class="token punctuation">&#125;</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">catch</span><span class="token punctuation">(</span><span class="token parameter">err</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
+    console<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span><span class="token string">'有一个接口失败了:'</span><span class="token punctuation">,</span> err<span class="token punctuation">)</span>
+  <span class="token punctuation">&#125;</span><span class="token punctuation">)</span>
+</code></pre>
+<p>🧠 进阶扩展：如果你想“部分失败不影响其他的成功”，可以用<strong>Promise.allSettled</strong>：</p>
+<pre class="language-javascript" data-language="javascript"><code class="language-javascript">Promise<span class="token punctuation">.</span><span class="token function">allSettled</span><span class="token punctuation">(</span><span class="token punctuation">[</span>p1<span class="token punctuation">,</span> p2<span class="token punctuation">,</span> p3<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">results</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
+  results<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token parameter">result</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>result<span class="token punctuation">.</span>status <span class="token operator">===</span> <span class="token string">'fulfilled'</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'成功：'</span><span class="token punctuation">,</span> result<span class="token punctuation">.</span>value<span class="token punctuation">)</span>
+    <span class="token punctuation">&#125;</span> <span class="token keyword">else</span> <span class="token punctuation">&#123;</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'失败：'</span><span class="token punctuation">,</span> result<span class="token punctuation">.</span>reason<span class="token punctuation">)</span>
+    <span class="token punctuation">&#125;</span>
+  <span class="token punctuation">&#125;</span><span class="token punctuation">)</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">)</span>
+</code></pre>
+
+<h3 style="text-align: left;" >lastIndexOf() </h3>
+
+
+<p>lastIndexOf() 是 JavaScript 中字符串（String）对象的一个方法，用来查找<strong>某个子字符串在原字符串中最后一次出现的位置（索引）</strong>。<br>例子</p>
+<pre class="language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">const</span> str <span class="token operator">=</span> <span class="token string">'path/to/middleware/custom/test.js'</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 查找最后一个斜杠的位置</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>str<span class="token punctuation">.</span><span class="token function">lastIndexOf</span><span class="token punctuation">(</span><span class="token string">'/'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 输出: 28（最后一个 '/' 在位置28）</span>
+
+<span class="token comment">// 查找 middleware 最后出现的位置</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>str<span class="token punctuation">.</span><span class="token function">lastIndexOf</span><span class="token punctuation">(</span><span class="token string">'middleware'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 输出: 9（首次出现位置）</span>
+
+<span class="token comment">// 截取 middleware 之后的部分</span>
+<span class="token keyword">const</span> result <span class="token operator">=</span> str<span class="token punctuation">.</span><span class="token function">substring</span><span class="token punctuation">(</span>str<span class="token punctuation">.</span><span class="token function">lastIndexOf</span><span class="token punctuation">(</span><span class="token string">'middleware/'</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">'middleware/'</span><span class="token punctuation">.</span>length<span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 输出: custom/test.js</span>
+</code></pre>
+
+<h3 style="text-align: left;" >substring() </h3>
+
+
+<p>substring() 是 JavaScript 中字符串（String）对象的一个方法，用来从字符串中提取子字符串（截取一部分字符串）。</p>
+<pre class="language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">const</span> str <span class="token operator">=</span> <span class="token string">"hello world"</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 从索引0开始，到索引5之前结束（不包含5）</span>
+<span class="token keyword">const</span> part1 <span class="token operator">=</span> str<span class="token punctuation">.</span><span class="token function">substring</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>part1<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// "hello"</span>
+
+<span class="token comment">// 从索引6开始截取到末尾</span>
+<span class="token keyword">const</span> part2 <span class="token operator">=</span> str<span class="token punctuation">.</span><span class="token function">substring</span><span class="token punctuation">(</span><span class="token number">6</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>part2<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// "world"</span>
+</code></pre>
+
+<h3 style="text-align: left;" >Object.assign()</h3>
+
+<div class="note simple"><p>Object.assign() 用于将一个或多个源对象的可枚举属性复制到目标对象上，并返回目标对象。</p>
+</div>
+
+<p>Object.assign(target, …sources)</p>
+<ul>
+<li>target：目标对象，属性会被添加到它身上</li>
+<li>sources：一个或多个源对象，从中复制属性<br>例子:<pre class="language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">const</span> a <span class="token operator">=</span> <span class="token punctuation">&#123;</span> <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'Tom'</span> <span class="token punctuation">&#125;</span>
+<span class="token keyword">const</span> b <span class="token operator">=</span> <span class="token punctuation">&#123;</span> <span class="token literal-property property">age</span><span class="token operator">:</span> <span class="token number">18</span> <span class="token punctuation">&#125;</span>
+<span class="token keyword">const</span> c <span class="token operator">=</span> Object<span class="token punctuation">.</span><span class="token function">assign</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span><span class="token punctuation">,</span> a<span class="token punctuation">,</span> b<span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span> <span class="token comment">// &#123; name: 'Tom', age: 18 &#125;</span>
+
+<span class="token comment">// 也可以覆盖</span>
+Object<span class="token punctuation">.</span><span class="token function">assign</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span><span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'Tom'</span><span class="token punctuation">&#125;</span><span class="token punctuation">,</span> <span class="token punctuation">&#123;</span><span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'Jerry'</span><span class="token punctuation">&#125;</span><span class="token punctuation">)</span> 
+<span class="token comment">// 结果：&#123;name: 'Jerry'&#125;</span>
+
+<span class="token comment">// 浅拷贝对象 const newObj = Object.assign(&#123;&#125;, oldObj)</span>
+<span class="token comment">// 不会复制原型链上的属性，只拷贝自身的可枚举属性</span>
+<span class="token keyword">const</span> obj1 <span class="token operator">=</span> <span class="token punctuation">&#123;</span> <span class="token literal-property property">nested</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span> <span class="token literal-property property">a</span><span class="token operator">:</span> <span class="token number">1</span> <span class="token punctuation">&#125;</span> <span class="token punctuation">&#125;</span>
+<span class="token keyword">const</span> obj2 <span class="token operator">=</span> Object<span class="token punctuation">.</span><span class="token function">assign</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span><span class="token punctuation">,</span> obj1<span class="token punctuation">)</span>
+obj2<span class="token punctuation">.</span>nested<span class="token punctuation">.</span>a <span class="token operator">=</span> <span class="token number">999</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>obj1<span class="token punctuation">.</span>nested<span class="token punctuation">.</span>a<span class="token punctuation">)</span> <span class="token comment">// 999（浅拷贝）</span>
+</code></pre>
+应用场景:<br>1.对象合并（配置合并、状态合并）<br>2.浅拷贝对象<br><strong>扩展</strong> - 与扩展运算符区别:<br>都是浅拷贝，但扩展运算符不会复制 getter&#x2F;setter<br>Object.assign() 会调用 getter 方法</li>
+</ul>
+
+<h3 style="text-align: left;" >原型链</h3>
+
+
+<p>代码示例：<br>首先定义了一个构造函数 Person, 然后在构造函数的 prototype 上定义了一个方法 sayHello。接着创造了一个 person1 实例对象,并访问它的属性和方法。最后, 验证了 person1 实例对象的 proto 属性确实指向构造函数的 prototype 对象, 建立了原型链关系</p>
+<pre class="language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// 创建一个构造函数</span>
+  <span class="token keyword">function</span> <span class="token function">Person</span><span class="token punctuation">(</span><span class="token parameter">name</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+
+<span class="token comment">// 在构造函数的 prototype上定义一个方法</span>
+<span class="token class-name">Person</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span>sayHello <span class="token operator">=</span> <span class="token function">fuction</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Hello, my name is </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">$&#123;</span><span class="token keyword">this</span><span class="token punctuation">.</span>name<span class="token interpolation-punctuation punctuation">&#125;</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token comment">// 创建一个实例对象</span>
+<span class="token keyword">const</span> person1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Person</span><span class="token punctuation">(</span><span class="token string">'Alice'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 访问实例对象的属性和方法</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>person1<span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 输出："Alice"</span>
+person1<span class="token punctuation">.</span><span class="token function">sayHello</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 输出： "Hello, my name is Alice"</span>
+
+<span class="token comment">// 查看实例对象的 _proto_ 属性, 它指向构造函数的 prototype 对象</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>person1<span class="token punctuation">.</span>_proto_ <span class="token operator">===</span> <span class="token class-name">Person</span><span class="token punctuation">.</span>prototype<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 输出 true</span></code></pre>
+<h4 style="text-align: left;" >prototype</h4>
+
+<ul>
+<li>构造函数特有的属性, 每个函数对象都有一个prototype属性, 它是一个对象</li>
+<li>常用于定义共享的属性和方法, 可以被构造函数创建的实例对象所继承。可以在构造函数的 prototype 上定义方法, 以便多个实例对象共享这些方法, 从而节省内存。</li>
+<li>主要用于原型继承, 它是构造函数和实例对象之间的链接, 用于共享方法和属性。</li>
+</ul>
+<h4 style="text-align: left;" >_proto_</h4>
+
+<ul>
+<li>每个对象都具有的属性, 它指向对象的原型</li>
+<li>用于实现原型链, 当访问一个对象的属性时, 如果对象本身没有这个属性, javaScript引擎会沿着原型链通过 <code> _proto_</code> 属性向上查找, 直到找到属性或者到达原型链的顶部( 通常是Object.prototype )</li>
+<li>主要是用于对象之间的继承, 它建立了对象之间的原型关系</li>
+</ul>
+<p><strong>总结：</strong><br>构造函数的 <code>prototype</code>对象会被赋予给实例对象的<code> _proto_</code>属性, 从而建立了原型链</p>
+<h3 style="text-align: left;" >Web Worker是什么</h3>
+
+<div class="note simple"><p>Web Worker 是一种在浏览器中开启独立线程运行脚本的方法，常用于处理耗时操作，以防止阻塞主线程（UI线程），提升页面响应性能。</p>
+</div>
+
+<p><strong>适用场景</strong><br>数据密集型计算（如大规模循环计算、加密、排序）<br>后台处理任务（如解析文件、大数据处理）<br>不需要操作 DOM（因为 Worker 无法访问 DOM）Worker 是运行在不同线程的，没有访问 DOM 的权限<br>主线程和 Worker 如何通信？通过 postMessage 和 onmessage，发送和接收数据。</p>
+<p><strong>顺序</strong></p>
+<ol>
+<li>主线程创建 Worker 实例</li>
+<li>主线程通过 postMessage() 向 Worker 发消息</li>
+<li>Worker 线程收到消息（onmessage），开始处理任务</li>
+<li>Worker 处理完成，通过 postMessage() 把结果发送回主线程</li>
+<li>主线程通过 onmessage 接收结果</li>
+</ol>
+<p><strong>基本用法</strong><br>主线程中使用 Web Worker</p>
+<pre class="language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// main.js</span>
+<span class="token keyword">const</span> worker <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Worker</span><span class="token punctuation">(</span><span class="token string">'worker.js'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 发送数据给 Worker</span>
+worker<span class="token punctuation">.</span><span class="token function">postMessage</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span> <span class="token literal-property property">count</span><span class="token operator">:</span> <span class="token number">100000</span> <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 接收来自 Worker 的消息</span>
+worker<span class="token punctuation">.</span><span class="token function-variable function">onmessage</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">event</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'收到 worker 的消息：'</span><span class="token punctuation">,</span> event<span class="token punctuation">.</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 监听错误</span>
+worker<span class="token punctuation">.</span><span class="token function-variable function">onerror</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">error</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  console<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span><span class="token string">'Worker 错误：'</span><span class="token punctuation">,</span> error<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+</code></pre>
+<p>Worker 文件中（worker.js）</p>
+<pre class="language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// worker.js</span>
+<span class="token comment">// 接收主线程发送的消息 self.onmessage</span>
+self<span class="token punctuation">.</span><span class="token function-variable function">onmessage</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">event</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">const</span> data <span class="token operator">=</span> event<span class="token punctuation">.</span>data<span class="token punctuation">;</span>
+  <span class="token keyword">let</span> result <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> data<span class="token punctuation">.</span>count<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    result <span class="token operator">+=</span> i<span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+  <span class="token comment">// 返回结果给主线程</span>
+  self<span class="token punctuation">.</span><span class="token function">postMessage</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+</code></pre>
+<p>终止 Worker</p>
+<pre class="language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// 在主线程中终止</span>
+worker<span class="token punctuation">.</span><span class="token function">terminate</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 或在 worker 内部自杀</span>
+self<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>使用 Blob 创建内联 Worker</p>
+<pre class="language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">const</span> workerCode <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
+  self.onmessage = function (e) &#123;
+    const num = e.data;
+    self.postMessage(num * 2);
+  &#125;
+</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> blob <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Blob</span><span class="token punctuation">(</span><span class="token punctuation">[</span>workerCode<span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">&#123;</span> <span class="token literal-property property">type</span><span class="token operator">:</span> <span class="token string">'application/javascript'</span> <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> worker <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Worker</span><span class="token punctuation">(</span><span class="token constant">URL</span><span class="token punctuation">.</span><span class="token function">createObjectURL</span><span class="token punctuation">(</span>blob<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+worker<span class="token punctuation">.</span><span class="token function">postMessage</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 输出 10</span>
+worker<span class="token punctuation">.</span><span class="token function-variable function">onmessage</span> <span class="token operator">=</span> <span class="token parameter">e</span> <span class="token operator">=></span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>e<span class="token punctuation">.</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 style="text-align: left;" >v8垃圾回收机制</h3>
+
+<p><strong>分代回收：</strong> V8 将内存主要分为两部分, 通常包括新生代和老生代。新生代存放生命周期短的对象,空间小(几MB),垃圾回收频繁,速度快; 而老生代包括经过多次回收仍然存活的对象(新生代晋升的对象)或生命周期长 ，新生代对象通常比老生代对象更容易回收<br><strong>标记清除：</strong> 它将内存中的对象分为 “可达”和“不可达” 两类，垃圾回收器首先标记所有可达对象，然后清除不可达的对象。这个过程涉及两个阶段，标记阶段和清除阶段。<br>标记阶段：从根元素开始，垃圾回收器递归遍历所有对象，并标记为可达对象， 标记表示对象是否被其他对象引用。<br>清除阶段：垃圾回收器遍历所有未标记的对象，即不可达的对象，并将其从内存中清除。</p>
+
+<h3 style="text-align: left;" >网络安全</h3>
+<h4 style="text-align: left;" >XSS 攻击</h4>
+
+
+<p>指的是攻击者在网页中注入恶意脚本，当用户浏览网页时，这些脚本会在用户的浏览器中执行,通常是在用户评论、留言板或用户生成的内容中，当用户访问这个评论，恶意代码就会被执行，从而窃取Cookie、Token、账号密码等敏感信息，或进行恶意跳转、控制页面行为等。</p>
+<p><strong>XSS类型</strong><br>存储型：恶意脚本被存入数据库, 用户访问时自动执行<br>反射型：恶意脚本通过URL参数传入并立即返回页面<br>DOM型：攻击脚本注入到页面后通过DOM操作执行</p>
+<p><strong>防范措施</strong></p>
+<ul>
+<li>对于用户输入的数据应该验证和过滤，仅允许预期的、安全的字符和内容通过，不要包含特殊字符。</li>
+<li>将用户输入的数据插入到html，js之前，要进行转义,防止浏览器解释用户输入的内容为可执行代码</li>
+<li>严格限制 innerHTML、document.write 等 API 使用</li>
+<li>表单、接口层严格校验数据格式、长度、字符类型。</li>
+</ul>
+<h4 style="text-align: left;" > DDoS 攻击</h4>
+是指攻击者通过控制大量被攻陷的计算机，向目标服务器发送大量请求，耗尽资源，使目标网站服务崩溃或无法响应正常用户请求。
+
+<p><strong>DDos表现</strong><br>服务器CPU、内存飙升，响应极慢或直接宕机<br>网络带宽被刷满, 拒绝正常请求<br>大量无效请求造成数据库连接池耗尽</p>
+<p><strong>防范措施</strong></p>
+<ul>
+<li>开启 流量清洗服务，过滤异常 IP</li>
+<li>设置 请求速率限制防止刷接口</li>
+<li>对敏感操作增加验证（如验证码、人机验证）</li>
+<li>配置 WAF（Web 应用防火墙）对流量行为分析和拦截</li>
+</ul>
+<h4 style="text-align: left;" >CSRF 攻击</h4>
+是指攻击者诱导用户在登录状态下，向受信任的网站发送非法请求，从而执行未授权操作（如转账、改密码、删除数据等）。
+
+<p><strong>防范措施</strong></p>
+<ul>
+<li>使用 CSRF Token：服务端生成并校验，每个表单&#x2F;请求中必须携带</li>
+<li>Referer 验证：判断请求来源是否合法</li>
+<li>SameSite Cookie 属性：设置 Cookie 的 SameSite&#x3D;Lax 或 Strict，防止第三方请求携带 Cookie。</li>
+<li>对敏感操作使用 POST + 验证码 &#x2F; 二次确认。</li>
+</ul>
+<h4 style="text-align: left;" >SQL注入</h4>
+
+<p>假设一个网页上的登陆表单,该表单将用户提供的用户名和密码与数据库中的进行身份验证，攻击者可以绕开身份验证<br>假设你在网页中有一个登录表单，用户输入用户名和密码后，后台会执行类似这样的 SQL</p>
+<pre class="language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">SELECT</span> <span class="token operator">*</span> <span class="token keyword">FROM</span> users <span class="token keyword">WHERE</span> username <span class="token operator">=</span> <span class="token string">'用户输入'</span> <span class="token operator">AND</span> password <span class="token operator">=</span> <span class="token string">'用户输入'</span><span class="token punctuation">;</span></code></pre>
+<p>如果攻击者在“用户名”处输入：’ OR ‘1’&#x3D;’1<br>最终拼接的 SQL 语句变成了：</p>
+<pre class="language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">SELECT</span> <span class="token operator">*</span> <span class="token keyword">FROM</span> users <span class="token keyword">WHERE</span> username <span class="token operator">=</span> <span class="token string">''</span> <span class="token operator">OR</span> <span class="token string">'1'</span><span class="token operator">=</span><span class="token string">'1'</span> <span class="token operator">AND</span> password <span class="token operator">=</span> <span class="token string">'...'</span><span class="token punctuation">;</span></code></pre>
+<p>这条语句永远为真，攻击者就可以绕过登录验证，直接登录系统</p>
+
+<h3 style="text-align: left;" >路由守卫是什么</h3>
+
+
+<div class="note simple"><p>是 Vue Router 提供的钩子函数, 用于在路由跳转前后进行拦截和控制, 比如用户权限校验、登陆状态判断、路由跳转前提示等</p>
+</div>
+
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>说明</th>
+<th>常见用途</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>全局前置守卫</strong> <code>router.beforeEach</code></td>
+<td>所有路由跳转前触发</td>
+<td>登录校验、权限拦截</td>
+</tr>
+<tr>
+<td><strong>全局后置守卫</strong> <code>router.afterEach</code></td>
+<td>路由跳转后触发</td>
+<td>页面埋点、清理操作</td>
+</tr>
+<tr>
+<td><strong>路由独享守卫</strong> <code>beforeEnter</code></td>
+<td>单个路由专属守卫</td>
+<td>单页权限控制</td>
+</tr>
+<tr>
+<td><strong>组件内守卫</strong> <code>beforeRouteEnter</code></td>
+<td>在组件内使用</td>
+<td>访问组件前&#x2F;离开时逻辑处理</td>
+</tr>
+</tbody></table>
+<ol>
+<li>全局前置守卫<pre class="language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// router/index.ts</span>
+<span class="token keyword">import</span> <span class="token punctuation">&#123;</span> createRouter<span class="token punctuation">,</span> createWebHistory <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'vue-router'</span>
+<span class="token keyword">import</span> routes <span class="token keyword">from</span> <span class="token string">'./routes'</span>
+
+<span class="token keyword">const</span> router <span class="token operator">=</span> <span class="token function">createRouter</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>
+  <span class="token literal-property property">history</span><span class="token operator">:</span> <span class="token function">createWebHistory</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  routes<span class="token punctuation">,</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">)</span>
+
+<span class="token comment">// 常用于登录状态判断和重定向</span>
+router<span class="token punctuation">.</span><span class="token function">beforeEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">to<span class="token punctuation">,</span> from<span class="token punctuation">,</span> next</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">const</span> token <span class="token operator">=</span> localStorage<span class="token punctuation">.</span><span class="token function">getItem</span><span class="token punctuation">(</span><span class="token string">'token'</span><span class="token punctuation">)</span>
+  
+    <span class="token keyword">if</span><span class="token punctuation">(</span> to<span class="token punctuation">.</span>path <span class="token operator">==</span> <span class="token string">'/login'</span> <span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+        <span class="token keyword">return</span> <span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span> <span class="token operator">!</span>localStorage<span class="token punctuation">.</span><span class="token function">getItem</span><span class="token punctuation">(</span><span class="token string">'TOKEN'</span><span class="token punctuation">)</span> <span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+        <span class="token keyword">return</span> <span class="token string">'/login'</span>
+    <span class="token punctuation">&#125;</span>
+    <span class="token comment">//动态添加路由</span>
+    <span class="token function">initRouter</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">//当前路由没有匹配到任何路由记录</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span> to<span class="token punctuation">.</span>matched<span class="token punctuation">.</span>length <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+        router<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span> to<span class="token punctuation">.</span>fullPath <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+    <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">)</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> router</code></pre></li>
+<li>路由独享守卫</li>
+</ol>
+<pre class="language-javascript" data-language="javascript"><code class="language-javascript"><span class="token punctuation">&#123;</span>
+  <span class="token literal-property property">path</span><span class="token operator">:</span> <span class="token string">'/admin'</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">component</span><span class="token operator">:</span> AdminView<span class="token punctuation">,</span>
+  <span class="token function-variable function">beforeEnter</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">to<span class="token punctuation">,</span> from<span class="token punctuation">,</span> next</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">const</span> isAdmin <span class="token operator">=</span> <span class="token function">checkIsAdmin</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>isAdmin<span class="token punctuation">)</span> <span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">else</span> <span class="token function">next</span><span class="token punctuation">(</span><span class="token string">'/403'</span><span class="token punctuation">)</span>
+  <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
+</code></pre>
+
+
+<h3 style="text-align: left;" >什么是跨域？</h3>
+
+
+<div class="note simple"><p>当你在前端页面 A（example.com）中，尝试向另一个接口 B（api.example.cn）发起请求时，浏览器发现两个地址不是同源，就会阻止请求或拒绝响应读取 —— 这就叫做“跨域”</p>
+</div>
+
+
+<h4 style="text-align: left;" >定义：</h4>
+
+<p>两个URL的<strong>协议</strong>、<strong>域名</strong>、<strong>端口</strong>三者必须完全相同, 才属于同源</p>
+<p>浏览器的同源策略限制了以下行为：</p>
+<ul>
+<li>Cookie、LocalStorage、SessionStorage 访问</li>
+<li>DOM节点访问</li>
+<li>AJAX请求</li>
+</ul>
+
+<h4 style="text-align: left;" >如何解决跨域问题？</h4>
+
+
+<ol>
+<li>CORS（推荐）：服务端设置响应头 Access-Control-Allow-Origin 来允许跨域访问</li>
+<li>JSONP：兼容性好, 仅限 GET 请求，利用<code>&lt;script&gt; </code>标签不受同源策略限制,存在XSS 安全隐患,不支持复杂请求&#x2F;请求头</li>
+<li>代理转发：通过开发服务器中间层（如 webpack devServer 的 proxy）转发请求</li>
+<li>nginx 反向代理：线上通过 nginx 转发接口请求到目标服务</li>
+<li>WebSocket：不受同源策略限制</li>
+</ol>
+
+<h4 style="text-align: left;" >CORS 中浏览器会发送几次请求？分别是什么？</h4>
+
+<p>视请求类型而定：可能是 1 次，也可能是 2 次。</p>
+<p><strong>简单请求, 只发 1 次请求</strong>: 方法是：GET、POST; 请求头是：Accept、Content-Type（且值为 application&#x2F;x-www-form-urlencoded、multipart&#x2F;form-data 或 text&#x2F;plain）; 没有使用自定义头（如 X-Token）</p>
+<p><strong>非简单请求,会发 2 次请求</strong>: 方法为：PUT、DELETE、PATCH; Content-Type 不是上述三种（如：application&#x2F;json）; 携带自定义请求头（如：Authorization、X-Token）<br>浏览器会先发送一个 OPTIONS 请求，称为 预检请求,目的是问服务器：我可以发这个跨域请求吗？<br>如果服务器响应头中包含：<br>Access-Control-Allow-Origin<br>Access-Control-Allow-Methods<br>Access-Control-Allow-Headers等，则浏览器才会继续发送实际请求</p>
+</article><div class="post-copyright"><div class="copyright-cc-box"><i class="anzhiyufont anzhiyu-icon-copyright"></i></div><div class="post-copyright__author_box"><a class="post-copyright__author_img" href="/" title="头像"><img class="post-copyright__author_img_back" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2025/05/20/682c842f3ea68.jpg" title="头像" alt="头像"><img class="post-copyright__author_img_front" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2025/05/20/682c842f3ea68.jpg" title="头像" alt="头像"></a><div class="post-copyright__author_name">晨梦</div><div class="post-copyright__author_desc">梦随晨光远行</div></div><div class="post-copyright__post__info"><a class="post-copyright__original" title="该文章为原创文章，注意版权协议" href="http://example.com/js/">原创</a><a class="post-copyright-title"><span onclick="rm.copyPageUrl('http://example.com/js/')">js学习笔记</span></a></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div class="rewardLeftButton"><div class="post-reward" onclick="anzhiyu.addRewardMask()"><div class="reward-button button--animated" title="赞赏作者"><i class="anzhiyufont anzhiyu-icon-hand-heart-fill"></i>打赏作者</div><div class="reward-main"><div class="reward-all"><span class="reward-title">感谢你赐予我前进的力量</span><ul class="reward-group"><li class="reward-item"><a href="/img/weichat-page.png" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/weichat-page.png" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li></ul><a class="reward-main-btn" href="/about/#about-reward" target="_blank"><div class="reward-text">赞赏者名单</div><div class="reward-dec">因为你们的支持让我意识到写文章的价值🙏</div></a></div></div></div><div id="quit-box" onclick="anzhiyu.removeRewardMask()" style="display: none"></div></div><div class="shareRight"><div class="share-link mobile"><div class="share-qrcode"><div class="share-button" title="使用手机访问这篇文章"><i class="anzhiyufont anzhiyu-icon-qrcode"></i></div><div class="share-main"><div class="share-main-all"><div id="qrcode" title="http://example.com/js/"></div><div class="reward-dec">使用手机访问这篇文章</div></div></div></div></div><div class="share-link weibo"><a class="share-button" target="_blank" href="https://service.weibo.com/share/share.php?title=js学习笔记&amp;url=http://example.com/js/&amp;pic=https://bu.dusays.com/2025/06/19/68541c91d11be.jpg" rel="external nofollow noreferrer noopener"><i class="anzhiyufont anzhiyu-icon-weibo"></i></a></div><script>function copyCurrentPageUrl() {
+  var currentPageUrl = window.location.href;
+  var input = document.createElement("input");
+  input.setAttribute("value", currentPageUrl);
+  document.body.appendChild(input);
+  input.select();
+  input.setSelectionRange(0, 99999);
+  document.execCommand("copy");
+  document.body.removeChild(input);
+}</script><div class="share-link copyurl"><div class="share-button" id="post-share-url" title="复制链接" onclick="copyCurrentPageUrl()"><i class="anzhiyufont anzhiyu-icon-link"></i></div></div></div></div></div><div class="post-copyright__notice"><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">晨梦记</a>！</span></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__box"><div class="post-meta__box__tag-list"><a class="post-meta__box__tags" href="/tags/js/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>js<span class="tagsPageCount">1</span></a></div></div></div><div class="post_share"><div class="social-share" data-image="https://bu.dusays.com/2025/05/20/682c857bf02fc.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"/><script src="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer="defer"></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/vue3-study/"><img class="prev-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2025/05/20/682c84859eb6c.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">vue3学习笔记</div></div></a></div><div class="next-post pull-right"><a href="/configuration/"><img class="next-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2025/05/20/682c8fce1dace.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">开发配置与经验总结</div></div></a></div></nav><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="anzhiyufont anzhiyu-icon-comments"></i><span> 评论</span></div><div class="comment-randomInfo"><a onclick="anzhiyu.addRandomCommentInfo()" href="javascript:void(0)">匿名评论</a><a href="/privacy" style="margin-left: 4px">隐私政策</a></div><div class="comment-tips" id="comment-tips"><span>✅ 你无需删除空行，直接评论以获取最佳展示效果</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div></div><div class="comment-barrage"></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="author-info__sayhi" id="author-info__sayhi" onclick="anzhiyu.changeSayHelloText()"></div><div class="author-info-avatar"><img class="avatar-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2025/05/20/682c842f3ea68.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-status"><img class="g-status" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/08/24/64e6ce9c507bb.png" alt="status"/></div></div><div class="author-info__description"><div style="line-height:1.38;margin:0.6rem 0;text-align:justify;color:rgba(255, 255, 255, 0.8);">这有关于<b style="color:#fff">产品、设计、开发</b>相关的问题和看法，还有<b style="color:#fff">文章翻译</b>和<b style="color:#fff">分享</b>。</div><div style="line-height:1.38;margin:0.6rem 0;text-align:justify;color:rgba(255, 255, 255, 0.8);">相信你可以在这里找到对你有用的<b style="color:#fff">知识</b>和<b style="color:#fff">教程</b>。</div></div><div class="author-info__bottom-group"><a class="author-info__bottom-group-left" href="/"><h1 class="author-info__name">晨梦</h1><div class="author-info__desc">梦随晨光远行</div></a><div class="card-info-social-icons is-center"><a class="social-icon faa-parent animated-hover" href="https://blog.csdn.net/m0_46607117?spm=1000.2115.3001.5343" target="_blank" title="CSDN"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-csdn"></use></svg></a><a class="social-icon faa-parent animated-hover" href="/img/contact.png" target="_blank" title="Contact"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-weixin"></use></svg></a></div></div></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-bullhorn anzhiyu-shake"></i><span>公告</span></div><div class="announcement_content">如果阅读过程中遇到了问题，请及时评论或者留言，看到了会在第一时间给出回复。</div></div><div class="card-widget" id="card-tuijian"><div id="tj-box"><div id="tj-box1"><div id="tj-left"><p>扫一扫</p>
+<span>快速打开移动端➤</span></div><div id="tj-right"><div id="tj-img-box"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAABkklEQVR42u3aMQ7DIAwF0Nz/0u1aqQr6NqRqyGPKQIDHgLDN8dqiHRgYGBgYGBgYGBgYGBgYGBgYmzKOuH32/x5hPGZvLgwMDIyzReR9zpY47tObCwMDAyM5KPOJq+zCXBgYGBjB0OMLXH7gYmBgYPySUQ1iMTAwMK4OYpPvG8TiGBgYN2T0CgO977+rb2BgYPw9o/zcYYJ34WMLDAyMrRmrkvhJ8SA5XhffcDEwMLZjVBdaTaWdwQohLgYGxuMZPcz4ryoGAwMDI2dUkdVgtTcCBgbGMxm9VH4euI4XurgwgIGBsSmjMERwNF/xQB8DAwMjT+LPlA1WXSsxMDAwkqX3llvdAgwMDIxqar76jH7to1UMDAyMassLk70twMDAwMhD1t6j1eoT/HLhEwMD48GMvMDZK4JWtw8DAwNjJsWfHMd5EFsuo2JgYGBMFyOT/vmmYGBgYMwwete7PEmHgYGBsTaIzZNrM+ErBgYGxnxhIL9Q9sqiGBgYT2bcq2FgYGBgYGBgYGBgYGBgYGBg3Ly9AZE4viLGxxp+AAAAAElFTkSuQmCC"/></div></div></div><div id="tj-box2"><div id="tj-left"><p>扫一扫</p>
+<span>下载移动端APP➤</span></div><div id="tj-right"><div id="tj-img-box"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQ4AAAEOCAAAAABd2qZ5AAADKklEQVR42u3cSXLbQBAEQP7/0/JVF9FVPQthK+fEYACDQV5avVCvL+vbeiHAgQMHDhw4cODAgQMHDhw4cODAgQOHhQMHjmWOV7y+X//T5+Sun87w06nWz4wDBw4cOO5z/CUsvX2x998kTLM98zPjwIEDB45PceTBNQmcyavOntKeGQcOHDhwPJkjT6LaJC0Pxjhw4MCB43/iWAmNOfTsuThw4MCB42kcbVvo/Q55WbAN1Q+qleLAgQMHjsMDDTc//wPzHThw4MDxKzlOrCT0zkqH206IAwcOHDiOcexqKe1KwPIxu7xQiAMHDhw4nsCxN4jOQPO76nInDhw4cOC4wpEPK8zGtduhhLx9VYdzHDhw4MBxjCNPftpr8m9mgbNN9nDgwIEDxx2O/CXzYl9+rFnq2A5z48CBAweOJ3DkQwbt2svaouPAgQMHjjsc7Wu3oO+vWQnVR2bSceDAgQPHJo71cbfkVdvd2oLj5oEGHDhw4MCxkMLlgw55sMyHEvLRhA3hGQcOHDhwXOHIU6b2oHm7aCWoH6mV4sCBAweOkqMdJmjTv7ZoOGtW5dA4cODAgeM0xyxBynfIy4Ur12welcOBAwcOHF97po6TrWfj2u3+OfTByUEcOHDgwLG1gx9tOkJsyVaKlThw4MCB4z5H/tp1MEtG1oLAuR68ceDAgQPHfY6VpGhX+pecagURBw4cOHDc5GhD4KyZtCtst0/EgQMHDhw3Odoy3KyMOGs4JYH/SNsJBw4cOHBsaju1j8x/XNoWDXOUvLmFAwcOHDhuciTtnFk6dy5VW3kWDhw4cOC4yXEuuWrbSG2xEgcOHDhwPIFjpR3VBuz26EkQ/cAQNg4cOHDg+Jr8G7V2fGGW/rUFyhkTDhw4cOC4zzELeO0RkzC8q4mFAwcOHDiewJH8VGa9KTVLDtcLgjhw4MCB4/kcbdMo2WEWRPN7ceDAgQPH0zhWEqc2OWyLkkVQx4EDBw4cVzjya1bKhbOkqx2VwIEDBw4cn+VoBxry9Gz2wklyOPtTAAcOHDhwnOb4nQsHDhw4cODAgQMHDhw4cODAgQMHDhw4LBw4cMTrD1gbKimwUbA0AAAAAElFTkSuQmCC"/></div></div></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-bars"></i><span>文章目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.</span> <span class="toc-text">什么是闭包有什么用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">2.</span> <span class="toc-text">如何遍历对象</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">3.</span> <span class="toc-text">如何判断JS的数据类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">4.</span> <span class="toc-text">说说常见的数组方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">5.</span> <span class="toc-text">防抖和节流</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">6.</span> <span class="toc-text">GET 和 POST 请求的区别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">7.</span> <span class="toc-text">强缓存和协商缓存</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">8.</span> <span class="toc-text">项目中有没有用过缓存策略？怎么设置的？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">9.</span> <span class="toc-text">浏览器存储的方式有哪些</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Cookie"><span class="toc-number">9.1.</span> <span class="toc-text">Cookie</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#LocalStorage"><span class="toc-number">9.2.</span> <span class="toc-text">LocalStorage</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#SessionStorage"><span class="toc-number">9.3.</span> <span class="toc-text">SessionStorage</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#IndexedDB"><span class="toc-number">9.4.</span> <span class="toc-text">IndexedDB</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">10.</span> <span class="toc-text">浅拷贝和深拷贝</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B5%85%E6%8B%B7%E8%B4%9D"><span class="toc-number">10.1.</span> <span class="toc-text">浅拷贝</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B7%B1%E6%8B%B7%E8%B4%9D"><span class="toc-number">10.2.</span> <span class="toc-text">深拷贝</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">11.</span> <span class="toc-text">数组去重的方法（3种）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">12.</span> <span class="toc-text">介绍下promise.all </span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">13.</span> <span class="toc-text">lastIndexOf() </span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">14.</span> <span class="toc-text">substring() </span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">15.</span> <span class="toc-text">Object.assign()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">16.</span> <span class="toc-text">原型链</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link"><span class="toc-number">16.1.</span> <span class="toc-text">prototype</span></a></li><li class="toc-item toc-level-4"><a class="toc-link"><span class="toc-number">16.2.</span> <span class="toc-text">_proto_</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">17.</span> <span class="toc-text">Web Worker是什么</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">18.</span> <span class="toc-text">v8垃圾回收机制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">19.</span> <span class="toc-text">网络安全</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link"><span class="toc-number">19.1.</span> <span class="toc-text">XSS 攻击</span></a></li><li class="toc-item toc-level-4"><a class="toc-link"><span class="toc-number">19.2.</span> <span class="toc-text"> DDoS 攻击</span></a></li><li class="toc-item toc-level-4"><a class="toc-link"><span class="toc-number">19.3.</span> <span class="toc-text">CSRF 攻击</span></a></li><li class="toc-item toc-level-4"><a class="toc-link"><span class="toc-number">19.4.</span> <span class="toc-text">SQL注入</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">20.</span> <span class="toc-text">路由守卫是什么</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">21.</span> <span class="toc-text">什么是跨域？</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link"><span class="toc-number">21.1.</span> <span class="toc-text">定义：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link"><span class="toc-number">21.2.</span> <span class="toc-text">如何解决跨域问题？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link"><span class="toc-number">21.3.</span> <span class="toc-text">CORS 中浏览器会发送几次请求？分别是什么？</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-history"></i><span>最近发布</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/proxy/" title="vue响应式原理源码分析"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2025/05/20/682c84a037d94.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="vue响应式原理源码分析"/></a><div class="content"><a class="title" href="/proxy/" title="vue响应式原理源码分析">vue响应式原理源码分析</a><time datetime="2025-05-15T13:55:45.865Z" title="发表于 2025-05-15 21:55:45">2025-05-15</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/mysql/" title="mySql学习"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2025/05/20/682c857bf02fc.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="mySql学习"/></a><div class="content"><a class="title" href="/mysql/" title="mySql学习">mySql学习</a><time datetime="2025-04-30T07:47:05.965Z" title="发表于 2025-04-30 15:47:05">2025-04-30</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/configuration/" title="开发配置与经验总结"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2025/05/20/682c8fce1dace.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="开发配置与经验总结"/></a><div class="content"><a class="title" href="/configuration/" title="开发配置与经验总结">开发配置与经验总结</a><time datetime="2025-04-18T10:02:54.667Z" title="发表于 2025-04-18 18:02:54">2025-04-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/js/" title="js学习笔记"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2025/06/19/68541c91d11be.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="js学习笔记"/></a><div class="content"><a class="title" href="/js/" title="js学习笔记">js学习笔记</a><time datetime="2025-04-15T09:24:50.000Z" title="发表于 2025-04-15 17:24:50">2025-04-15</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/vue3-study/" title="vue3学习笔记"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2025/05/20/682c84859eb6c.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="vue3学习笔记"/></a><div class="content"><a class="title" href="/vue3-study/" title="vue3学习笔记">vue3学习笔记</a><time datetime="2025-04-15T09:24:50.000Z" title="发表于 2025-04-15 17:24:50">2025-04-15</time></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2025 By 晨梦</div><div id="workboard"><img class="workSituationImg boardsign" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/goWork.svg" alt="距离月入25k也就还差一个大佬带我~" title="距离月入25k也就还差一个大佬带我~"/><div id="runtimeTextTip"></div></div><p id="ghbdages"><a class="github-badge" target="_blank" href="https://hexo.io/" style="margin-inline:5px" data-title="博客框架为Hexo 7.3.0" title="博客框架为Hexo 7.3.0"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://img.shields.io/badge/Frame-Hexo-blue?style=flat&amp;logo=hexo" alt="博客框架为Hexo 7.3.0"/></a><a class="github-badge" target="_blank" href="https://www.dogecloud.com/" style="margin-inline:5px" data-title="本站使用多吉云为静态资源提供CDN加速" title="本站使用多吉云为静态资源提供CDN加速"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@2.2.0/img/badge/CDN-多吉云-3693F3.svg" alt="本站使用多吉云为静态资源提供CDN加速"/></a><a class="github-badge" target="_blank" href="https://beian.miit.gov.cn/#/Integrated/index" style="margin-inline:5px" data-title="本站已在苏进行备案" title="本站已在苏进行备案"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://img.shields.io/badge/苏ICP备-2022004213号-e1d492?style=flat&amp;logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAdCAYAAAC9pNwMAAABS2lUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4KPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxNDIgNzkuMTYwOTI0LCAyMDE3LzA3LzEzLTAxOjA2OjM5ICAgICAgICAiPgogPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIi8+CiA8L3JkZjpSREY+CjwveDp4bXBtZXRhPgo8P3hwYWNrZXQgZW5kPSJyIj8+nhxg7wAACNlJREFUSInF1mmMVeUdx/Hv2e+5+519mJWBYQZkGxZZxLKJqBXGoLS1iXWrmihotFXaJiTWWlsbl6q1aetWd5u0VkKjNG4YEJSlOCibDLMwM8x679z9nnPP1jcVJUxf+7z6J8+LT37/Z4VvaQhfFS8+sBXbctCDGrVTKlBUH4mxAbI9Hfj0IJLsp6paJ5/tmn20N/D0wKDRMq9F/c3M2U1/V0vDfWMFh+tv/Ig1zYPMabDImPJ52OaXO87W580KggCiiOsJOJ6I3wcNFaaeNKxrt72f2fLGu4FpJ/sDQABRzD22fH7/Yze069vGc6mrDLNIJCDik10sxz2by3VdPM87xzkP9jwPTZFRVI1YUJKH+oy7n3tbvv/P2wW/UQxRWe6w4ZJRptYLHDoCuz8v5cP92XbI762O+h6UVWHnUFbPpU0fEb2A60mMJ7MUi9b/b7UgKhiZMaIxm8YLplLMDPz8hl/EH+rs8TNlUpFf32uyZJGLPDwCiTGUyTWodTN49eUCdz2YwXb9NNcObp1X98WDoufynzMVCEKGn27ayPTWBi5ad8P5iQUkJEnFLjqM9Z+hrVX0vfDe6K2dPRWsW2bwyp9EUifSJB84gdxrkR0eRgv1o/3I4fbbprJ6scqamzVO9pffec1S5ZWY2Nfz5qEy/FqOC2Y3s3j53HMSi18VRjFPwSwg+1RfVbl115vvJrsfej7UGIsYPPGgQ7JXoO+Xx5B3dHEomyJ9x1qiQozkr95h5937aFnVyouPlgJK+Ss7Fxz64OTSxSX+LHYxT2IsRW5kbGI4oHcR0jqoqTjV9se3I7/f8rS/ClS23GxSXhph6L5d9Akm7qqZhHWBQGUJ+CWGFzcg7e7m6D3/ZuW1Ea5YKdA3EojuONi813TqNi+YPYOKUhXDtCeGL26/hakLLiEcdsaHRkRAoLRc4fJrmhnekyF0apgZowWSwwkaa+rw3f8WA1GZZsPP5JEChX8dhZTN6iU6kAcs5s+dHd183SJ0VVKL57pfw6YdRQw23aeWTns47DPTALWlRTR7kMLew6hGgYqUhWXYFFUdPZ6lUBahLA8hVcOftckfi7No7VRAAQqsX1dybfvG1qwriM9mM5mJ4e4jO5Cc01dPqixbr8tWGBQUL4vjGigEEShi+xUmZ2RiR/sJ1pbS8NkgZrKAGw0TsgQsQyFaF/nfYTGprAlMFysbA1pI3mhkR6snhGsaymYGvPyFEb9IdbUE2AzFFTwpRqCtBY0wmdER+hZW4j63gcJj38V+/ErSUZXsYBfjIZHIRW0c2Z8BskCAqN+CbBJBFnyyKjR+Ez57nBxLqpfMUeSISElMBFz6x2Q6OxzWrYjyxWVzEewioU3LCS5vQY6nMUrLwNaxXvoQ59IloFSx54PPAZtQLExVZZDxsVE8J4dn6v4JYatgbSjk0owPw7RGH2ADMo88Z7L20ip8f7gC7fAo0q4+0rt7kEQDvaghVZbiPHUHcyeXcfLjT3jmpR7AYsnSScya3UR8bARVMck7Y/cB75/X6rDf3Fg2dw2jKZm5dXGm1LuAzO5DCo9v6aT0ibco5kzOvLOP+NGTFJtDpPYeZKijk/Rn3QxsfZV7txwhX7ABiZUXBsGvIvguQApNQQva9RMmTvZ2dpVUls+tX/UD7GN/Y8Ws05w6rQF+9vyzg1vZjbvMRJhXiRSU8DpTFFe0QE8S6SfPkOkZoktrB2oAhZWrwljxOPmchiSMYOWNoxNuruFU5vWeXdsojiUon345113dBBQBmTYlTimgdB8nfPo4WjaNFgN9OMEkJ02dnadVt5ki54Esqy+bzKJltVhSPbI3iN2zCyMTeXNCuG7Omm2Zok7PR2+R7jvD8ouruHhmCrB5jVZeYxLdrTP4sr4Vtd9g4MA4qc4c+6cu5NPamfw4P59t2WrA4YdXKkASf7SFivo6PDdEPmf1fRM++zp1bH/0r4I1dD1ODtOWaW4IsvPjL7nqXhloQiSPwjjgMYkMASyGEBkjhISCQwkwzve/18AbT+pk8pVY4UacQi9y+gyZ0eRAw4qHa89LXEx1LXMSPfhDJYRb59BtlLKg2WPT2l6qYl1svtGkrLYckyA1S+t5+2ATm37WCui0LSynsckDNH5zTxAchbQtkx08hDHYiW6NgC0enHBzEZ102UDH8QORdEckjEzZrNWkRydzyx17uGnDXqbUnGZ6dRPjSY91q2TqwjFuvTxLo5Zn5Qo/pumRSFcTLQtybEhGE0fQrDhhJ0VvH2lTnnHPhGtsmWan469apERjI2MH3qN7+7MEfH6ql29CbV7PvsMG32k6yU2XDhEKyZw66eJaRdrXR7CzCcqUNC3zwgymPJRCH4KRRLINimpL14A5Y4GDeOqbsPRVcfuN7Xj44pav/hFfrNT2kr2rsqf2Ibp5pEA14ZIImUyW3t5REkkTXRGQ/DGGhtLginhqCWknQDE5hKf5UFSF9Lj020Q2ul5V1AR2hr+8vuP8Vlc2zMPRxoSjnx7XBC14sDoydahSGq7KdO/HFyrBchxCVfX4fDKp4T7SCQejYODZLrYgIqgKFsNIgQqEYob8mW6yiUyb7Z64LVK/+B85xznnJ3AWzqTzuIX46mr5wLs+UUTyIriBCjRNxguHMJIFDLEEvXEOVRWnSJ0+jCd4CJoGjoedM1CLcXQziW3nMV2TSMBeOx7vWZvPt1r+cMPzE8KunaUkFn0vNrvtqXj34c1W6gzxlEQ6naIoBahtnkMwoFMwIVzSRNguMt53Aj2s4nkSlgPoGqLkICsRNF0gl8rYWuP8+11/w/OOJDEhHPKLCIpOXmi+M9AgP+maiesLifF2T1Rn5ZNj5Lo/Qc/GcPMmhdoqlEgIGzCK4PiCmJKK68p4KfF3qYGuF0qCRUkJTzleUbvQyWRTuE5xYthxQbBs7EISAbkzUFG3VfXXbK2YFi3X/eryfKKnqVBItNjJxDzH8erddC4SqWwcN5WyTtlyO1RP/Lh3eHD76MB40swmiDVJyDLYRhpc5+ub6tse/wWKbvSQEAw1awAAAABJRU5ErkJggg==" alt="本站已在苏进行备案"/></a><a class="github-badge" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" style="margin-inline:5px" data-title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可" title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://img.shields.io/badge/Copyright-BY--NC--SA%204.0-d42328?style=flat&amp;logo=Claris" alt="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可"/></a></p></div></footer></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="sidebar-site-data site-data is-center"><a href="/archives/" title="archive"><div class="headline">文章</div><div class="length-num">9</div></a><a href="/tags/" title="tag"><div class="headline">标签</div><div class="length-num">9</div></a><a href="/categories/" title="category"><div class="headline">分类</div><div class="length-num">8</div></a></div><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><a class="darkmode_switchbutton menu-child" href="javascript:void(0);" title="显示模式"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span>显示模式</span></a></div><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网页</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://cmeng.me" title="个人主页"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/siteicon/32.png" alt="个人主页"/><span class="back-menu-item-text">个人主页</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">项目</div><div class="back-menu-list"><a class="back-menu-item" href="#" title="我的项目"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/icon-Favroites" alt="我的项目"/><span class="back-menu-item-text">我的项目</span></a></div></div></div><div class="menus_items"><div class="menus_item"><a class="site-page faa-parent animated-hover" href="/"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-zhuye1"></use></svg><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-wenzhang"></use></svg><span> 博文</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-guidang"></use></svg><span> 归档</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-icon"></use></svg><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/logData/"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-y1"></use></svg><span> 日志</span></a></li></ul></div><div class="menus_item"><a class="site-page faa-parent animated-hover" href="/statistics/"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-m_reports"></use></svg><span> 统计</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-yanglazhuye"></use></svg><span> 生活</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/essay/"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-jinmao"></use></svg><span> 闲言碎语</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/fcircle/"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-computer-network-internet"></use></svg><span> 项目</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/music/"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-yinle"></use></svg><span> 音乐馆</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/album/"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-xiangce"></use></svg><span> 相册</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-a-Deliverydisongfasongzhifeiji"></use></svg><span> 关于</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/about/"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-aixin"></use></svg><span> 关于本人</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/comments/"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-liuyanban"></use></svg><span> 留言板</span></a></li><li><a class="site-page child faa-parent animated-hover" href="javascript:toRandomPost()"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-jinmao"></use></svg><span> 随便逛逛</span></a></li></ul></div></div><span class="sidebar-menu-item-title">标签</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/GUIYUAN/" style="font-size: 0.88rem;">GUIYUAN<sup>1</sup></a><a href="/tags/js/" style="font-size: 0.88rem;">js<sup>1</sup></a><a href="/tags/mySql/" style="font-size: 0.88rem;">mySql<sup>1</sup></a><a href="/tags/vue/" style="font-size: 0.88rem;">vue<sup>1</sup></a><a href="/tags/vue3/" style="font-size: 0.88rem;">vue3<sup>1</sup></a><a href="/tags/%E7%BB%8F%E9%AA%8C/" style="font-size: 0.88rem;">经验<sup>1</sup></a><a href="/tags/%E9%85%8D%E7%BD%AE/" style="font-size: 0.88rem;">配置<sup>1</sup></a><a href="/tags/%E9%9D%A2%E8%AF%95/" style="font-size: 0.88rem;">面试<sup>1</sup></a><a href="/tags/%E9%A1%B9%E7%9B%AE/" style="font-size: 0.88rem;">项目<sup>1</sup></a></div></div><hr/></div></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="anzhiyufont anzhiyu-icon-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="anzhiyufont anzhiyu-icon-gear"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="anzhiyufont anzhiyu-icon-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="anzhiyufont anzhiyu-icon-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></button></div></div><div id="nav-music"><a id="nav-music-hoverTips" onclick="anzhiyu.musicToggle()" accesskey="m">播放音乐</a><div id="console-music-bg"></div><meting-js id="3053710706" server="netease" type="playlist" mutex="true" preload="none" theme="var(--anzhiyu-main)" data-lrctype="0" order="random" volume="0.7"></meting-js></div><div id="algolia-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><button class="search-close-button"><i class="anzhiyufont anzhiyu-icon-xmark"></i></button></nav><div class="search-wrap"><div id="algolia-search-input"></div><hr/><div id="algolia-search-results"><div id="algolia-hits"></div><div id="algolia-pagination"></div><div id="algolia-info"><div class="algolia-stats"></div><div class="algolia-poweredBy"></div></div></div></div></div><div id="search-mask"></div></div><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><div class="rightMenu-item" id="menu-backward"><i class="anzhiyufont anzhiyu-icon-arrow-left"></i></div><div class="rightMenu-item" id="menu-forward"><i class="anzhiyufont anzhiyu-icon-arrow-right"></i></div><div class="rightMenu-item" id="menu-refresh"><i class="anzhiyufont anzhiyu-icon-arrow-rotate-right" style="font-size: 1rem;"></i></div><div class="rightMenu-item" id="menu-top"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></div></div><div class="rightMenu-group rightMenu-line rightMenuPlugin"><div class="rightMenu-item" id="menu-copytext"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制选中文本</span></div><div class="rightMenu-item" id="menu-pastetext"><i class="anzhiyufont anzhiyu-icon-paste"></i><span>粘贴文本</span></div><a class="rightMenu-item" id="menu-commenttext"><i class="anzhiyufont anzhiyu-icon-comment-medical"></i><span>引用到评论</span></a><div class="rightMenu-item" id="menu-newwindow"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开</span></div><div class="rightMenu-item" id="menu-copylink"><i class="anzhiyufont anzhiyu-icon-link"></i><span>复制链接地址</span></div><div class="rightMenu-item" id="menu-copyimg"><i class="anzhiyufont anzhiyu-icon-images"></i><span>复制此图片</span></div><div class="rightMenu-item" id="menu-downloadimg"><i class="anzhiyufont anzhiyu-icon-download"></i><span>下载此图片</span></div><div class="rightMenu-item" id="menu-newwindowimg"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开图片</span></div><div class="rightMenu-item" id="menu-search"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>站内搜索</span></div><div class="rightMenu-item" id="menu-searchBaidu"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>百度搜索</span></div><div class="rightMenu-item" id="menu-music-toggle"><i class="anzhiyufont anzhiyu-icon-play"></i><span>播放音乐</span></div><div class="rightMenu-item" id="menu-music-back"><i class="anzhiyufont anzhiyu-icon-backward"></i><span>切换到上一首</span></div><div class="rightMenu-item" id="menu-music-forward"><i class="anzhiyufont anzhiyu-icon-forward"></i><span>切换到下一首</span></div><div class="rightMenu-item" id="menu-music-playlist" onclick="window.open(&quot;https://music.163.com/#/playlist?id=3053710706&quot;, &quot;_blank&quot;);" style="display: none;"><i class="anzhiyufont anzhiyu-icon-radio"></i><span>查看所有歌曲</span></div><div class="rightMenu-item" id="menu-music-copyMusicName"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制歌名</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item menu-link" id="menu-randomPost"><i class="anzhiyufont anzhiyu-icon-shuffle"></i><span>随便逛逛</span></a><a class="rightMenu-item menu-link" href="/categories/"><i class="anzhiyufont anzhiyu-icon-cube"></i><span>博客分类</span></a><a class="rightMenu-item menu-link" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags"></i><span>文章标签</span></a></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item" id="menu-copy" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制地址</span></a><a class="rightMenu-item" id="menu-commentBarrage" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-message"></i><span class="menu-commentBarrage-text">关闭热评</span></a><a class="rightMenu-item" id="menu-darkmode" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span class="menu-darkmode-text">深色模式</span></a><a class="rightMenu-item" id="menu-translate" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-language"></i><span>轉為繁體</span></a></div></div><div id="rightmenu-mask"></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.umd.js"></script><script src="https://cdn.cbd.int/instant.page@5.2.0/instantpage.js" type="module"></script><script src="https://cdn.cbd.int/vanilla-lazyload@17.8.5/dist/lazyload.iife.min.js"></script><script src="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.js"></script><canvas id="universe"></canvas><script async src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/dark/dark.js"></script><script>// 消除控制台打印
+var HoldLog = console.log;
+console.log = function () {};
+let now1 = new Date();
+queueMicrotask(() => {
+  const Log = function () {
+    HoldLog.apply(console, arguments);
+  }; //在恢复前输出日志
+  const grt = new Date("03/13/2025 00:00:00"); //此处修改你的建站时间或者网站上线时间
+  now1.setTime(now1.getTime() + 250);
+  const days = (now1 - grt) / 1000 / 60 / 60 / 24;
+  const dnum = Math.floor(days);
+  const ascll = [
+    `欢迎使用晨梦记!`,
+    `生活明朗, 万物可爱`,
+    `
+               ____   __  __   _____   _   _   
+      / ___| |  \/  | | ____| | \ | |  / ___|
+     | |     | |\/| | |  _|   |  \| | | |  _ 
+     | |___  | |  | | | |___  | |\  | | |_| |
+      \____| |_|  |_| |_____| |_| \_|  \____|
+
+        `,
+    "已上线",
+    dnum,
+    "天",
+    "©2025 By 晨梦记 V1.6.14",
+  ];
+  const ascll2 = [`NCC2-036`, `调用前置摄像头拍照成功，识别为【小笨蛋】.`, `Photo captured: `, `🤪`];
+
+  setTimeout(
+    Log.bind(
+      console,
+      `\n%c${ascll[0]} %c ${ascll[1]} %c ${ascll[2]} %c${ascll[3]}%c ${ascll[4]}%c ${ascll[5]}\n\n%c ${ascll[6]}\n`,
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      ""
+    )
+  );
+  setTimeout(
+    Log.bind(
+      console,
+      `%c ${ascll2[0]} %c ${ascll2[1]} %c \n${ascll2[2]} %c\n${ascll2[3]}\n`,
+      "color:white; background-color:#4fd953",
+      "",
+      "",
+      'background:url("https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/tinggge.gif") no-repeat;font-size:450%'
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c WELCOME %c 你好，小笨蛋.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(
+      console,
+      "%c ⚡ Powered by 晨梦记 %c 你正在访问 晨梦 的博客.",
+      "color:white; background-color:#f0ad4e",
+      ""
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c W23-12 %c 你已打开控制台.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(console, "%c S013-782 %c 你现在正处于监控中.", "color:white; background-color:#d9534f", "")
+  );
+});</script><script async src="/anzhiyu/random.js"></script><script async="async">(function () {
+  var grt = new Date("03/13/2025 00:00:00"); //设置网站上线时间
+  var now = new Date();
+  var dnum;
+  var hnum;
+  var mnum;
+  var snum;
+  var nowHour;
+
+  // 计算并更新天数、小时数、分钟数和秒数
+  function updateTime() {
+    now = new Date(); // 更新 now 的值
+    nowHour = now.getHours(); // 更新 nowHour 的值
+    var days = (now - grt) / 1000 / 60 / 60 / 24;
+    dnum = Math.floor(days);
+    var hours = (now - grt) / 1000 / 60 / 60 - 24 * dnum;
+    hnum = Math.floor(hours);
+    if (String(hnum).length == 1) {
+      hnum = "0" + hnum;
+    }
+    var minutes = (now - grt) / 1000 / 60 - 24 * 60 * dnum - 60 * hnum;
+    mnum = Math.floor(minutes);
+    if (String(mnum).length == 1) {
+      mnum = "0" + mnum;
+    }
+    var seconds = (now - grt) / 1000 - 24 * 60 * 60 * dnum - 60 * 60 * hnum - 60 * mnum;
+    snum = Math.round(seconds);
+    if (String(snum).length == 1) {
+      snum = "0" + snum;
+    }
+  }
+
+  // 更新网页中显示的网站运行时间
+  function updateHtml() {
+    const footer = document.getElementById("footer");
+    if (!footer) return
+    let currentTimeHtml = "";
+    if (nowHour < 18 && nowHour >= 9) {
+      // 如果是上班时间，默认就是"安知鱼-上班摸鱼中.svg"图片，不需要更改
+      currentTimeHtml = `本站居然运行了 ${dnum} 天<span id='runtime'> ${hnum} 小时 ${mnum} 分 ${snum} 秒 </span><i class='anzhiyufont anzhiyu-icon-heartbeat' style='color:red'></i>`;
+    } else {
+      // 如果是下班时间，插入"安知鱼-下班啦.svg"图片
+      let img = document.querySelector("#workboard .workSituationImg");
+      if (img != null) {
+        img.src = "/img/offWork.svg";
+        img.title = "下班了就该开开心心的玩耍，嘿嘿~";
+        img.alt = "下班了就该开开心心的玩耍，嘿嘿~";
+      }
+
+      currentTimeHtml = `本站居然运行了 ${dnum} 天<span id='runtime'> ${hnum} 小时 ${mnum} 分 ${snum} 秒 </span><i class='anzhiyufont anzhiyu-icon-heartbeat' style='color:red'></i>`;
+    }
+
+    if (document.getElementById("runtimeTextTip")) {
+      document.getElementById("runtimeTextTip").innerHTML = currentTimeHtml;
+    }
+  }
+
+  setInterval(() => {
+    updateTime();
+    updateHtml();
+  }, 1000);
+})();</script><script src="https://cdn.cbd.int/algoliasearch@4.18.0/dist/algoliasearch-lite.umd.js"></script><script src="https://cdn.cbd.int/instantsearch.js@4.60.0/dist/instantsearch.production.min.js"></script><script src="/js/search/algolia.js"></script><div class="js-pjax"><script>(() => {
+  const $mermaid = document.querySelectorAll('#article-container .mermaid-wrap')
+  if ($mermaid.length === 0) return
+  const runMermaid = () => {
+    window.loadMermaid = true
+    const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default'
+
+    Array.from($mermaid).forEach((item, index) => {
+      const mermaidSrc = item.firstElementChild
+      const mermaidThemeConfig = '%%{init:{ \'theme\':\'' + theme + '\'}}%%\n'
+      const mermaidID = 'mermaid-' + index
+      const mermaidDefinition = mermaidThemeConfig + mermaidSrc.textContent
+
+      const renderFn = mermaid.render(mermaidID, mermaidDefinition)
+
+      const renderV10 = () => {
+        renderFn.then(({svg}) => {
+          mermaidSrc.insertAdjacentHTML('afterend', svg)
+        })
+      }
+
+      const renderV9 = svg => {
+        mermaidSrc.insertAdjacentHTML('afterend', svg)
+      }
+
+      typeof renderFn === 'string' ? renderV9(renderFn) : renderV10()
+    })
+  }
+
+  const loadMermaid = () => {
+    window.loadMermaid ? runMermaid() : getScript('https://cdn.cbd.int/mermaid@10.2.4/dist/mermaid.min.js').then(runMermaid)
+  }
+
+  anzhiyu.addGlobalFn('themeChange', runMermaid, 'mermaid')
+
+  window.pjax ? loadMermaid() : document.addEventListener('DOMContentLoaded', loadMermaid)
+})()</script><script>(() => {
+  const init = () => {
+    twikoo.init(Object.assign({
+      el: '#twikoo-wrap',
+      envId: 'https://www.cmeng.me/',
+      region: '',
+      onCommentLoaded: () => {
+        anzhiyu.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
+      }
+    }, null))
+  }
+
+  const loadTwikoo = () => {
+    if (typeof twikoo === 'object') setTimeout(runFn,0)
+    else getScript('https://cdn.cbd.int/twikoo@1.6.39/dist/twikoo.all.min.js').then(runFn)
+  }
+
+  const getCount = () => {
+    const countELement = document.getElementById('twikoo-count')
+    if(!countELement) return
+    twikoo.getCommentsCount({
+      envId: 'https://www.cmeng.me/',
+      region: '',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(res => {
+      countELement.textContent = res[0].count
+    }).catch(err => {
+      console.error(err)
+    })
+  }
+
+  const runFn = () => {
+    init();
+    GLOBAL_CONFIG_SITE.isPost && getCount()
+  }
+
+  if ('Twikoo' === 'Twikoo' || !true) {
+    if (true) anzhiyu.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else {
+      loadTwikoo()
+    }
+  } else {
+    window.loadOtherComment = loadTwikoo
+  }
+})()</script><input type="hidden" name="page-type" id="page-type" value="post"></div><script>window.addEventListener('load', () => {
+  const changeContent = (content) => {
+    if (content === '') return content
+
+    content = content.replace(/<img.*?src="(.*?)"?[^\>]+>/ig, '[图片]') // replace image link
+    content = content.replace(/<a[^>]+?href=["']?([^"']+)["']?[^>]*>([^<]+)<\/a>/gi, '[链接]') // replace url
+    content = content.replace(/<pre><code>.*?<\/pre>/gi, '[代码]') // replace code
+    content = content.replace(/<[^>]+>/g,"") // remove html tag
+
+    if (content.length > 150) {
+      content = content.substring(0,150) + '...'
+    }
+    return content
+  }
+
+  const getComment = () => {
+    const runTwikoo = () => {
+      twikoo.getRecentComments({
+        envId: 'https://www.cmeng.me/',
+        region: '',
+        pageSize: 6,
+        includeReply: true
+      }).then(function (res) {
+        const twikooArray = res.map(e => {
+          return {
+            'content': changeContent(e.comment),
+            'avatar': e.avatar,
+            'nick': e.nick,
+            'url': e.url + '#' + e.id,
+            'date': new Date(e.created).toISOString()
+          }
+        })
+
+        saveToLocal.set('twikoo-newest-comments', JSON.stringify(twikooArray), 10/(60*24))
+        generateHtml(twikooArray)
+      }).catch(function (err) {
+        const $dom = document.querySelector('#card-newest-comments .aside-list')
+        $dom.textContent= "无法获取评论，请确认相关配置是否正确"
+      })
+    }
+
+    if (typeof twikoo === 'object') {
+      runTwikoo()
+    } else {
+      getScript('https://cdn.cbd.int/twikoo@1.6.39/dist/twikoo.all.min.js').then(runTwikoo)
+    }
+  }
+
+  const generateHtml = array => {
+    let result = ''
+
+    if (array.length) {
+      for (let i = 0; i < array.length; i++) {
+        result += '<div class=\'aside-list-item\'>'
+
+        if (true) {
+          const name = 'data-lazy-src'
+          result += `<a href='${array[i].url}' class='thumbnail'><img ${name}='${array[i].avatar}' alt='${array[i].nick}'><div class='name'><span>${array[i].nick} </span></div></a>`
+        }
+        
+        result += `<div class='content'>
+        <a class='comment' href='${array[i].url}' title='${array[i].content}'>${array[i].content}</a>
+        <time datetime="${array[i].date}">${anzhiyu.diffDate(array[i].date, true)}</time></div>
+        </div>`
+      }
+    } else {
+      result += '没有评论'
+    }
+
+    let $dom = document.querySelector('#card-newest-comments .aside-list')
+    $dom && ($dom.innerHTML= result)
+    window.lazyLoadInstance && window.lazyLoadInstance.update()
+    window.pjax && window.pjax.refresh($dom)
+  }
+
+  const newestCommentInit = () => {
+    if (document.querySelector('#card-newest-comments .aside-list')) {
+      const data = saveToLocal.get('twikoo-newest-comments')
+      if (data) {
+        generateHtml(JSON.parse(data))
+      } else {
+        getComment()
+      }
+    }
+  }
+
+  newestCommentInit()
+  document.addEventListener('pjax:complete', newestCommentInit)
+})</script><script>var visitorMail = "";
+</script><script async data-pjax src="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/waterfall/waterfall.js"></script><script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/qrcodejs/1.0.0/qrcode.min.js"></script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.9/icon/ali_iconfont_css.css"><script async src="//at.alicdn.com/t/c/font_4844381_1t4p8c1i3sn.js"></script><script src="/js/prism.js"></script><script src="https://cdn.cbd.int/butterfly-extsrc@1.1.3/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = false;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script id="click-heart" src="https://cdn.cbd.int/butterfly-extsrc@1.1.3/dist/click-heart.min.js" async="async" mobile="false"></script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/aplayer/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.cbd.int/anzhiyu-blog-static@1.0.1/js/APlayer.min.js"></script><script src="https://cdn.cbd.int/hexo-anzhiyu-music@1.0.1/assets/js/Meting2.min.js"></script><script src="https://cdn.cbd.int/pjax@0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["meta[property=\"og:image\"]","meta[property=\"og:title\"]","meta[property=\"og:url\"]","meta[property=\"og:type\"]","meta[property=\"og:site_name\"]","meta[property=\"og:description\"]","head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+  // removeEventListener scroll 
+  anzhiyu.removeGlobalFnEvent('pjax')
+  anzhiyu.removeGlobalFnEvent('themeChange')
+
+  document.getElementById('rightside').classList.remove('rightside-show')
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', e => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script charset="UTF-8" src="https://cdn.cbd.int/anzhiyu-theme-static@1.1.5/accesskey/accesskey.js"></script></div><div id="popup-window"><div class="popup-window-title">通知</div><div class="popup-window-divider"></div><div class="popup-window-content"><div class="popup-tip">你好呀</div><div class="popup-link"><i class="anzhiyufont anzhiyu-icon-arrow-circle-right"></i></div></div></div></body></html>
